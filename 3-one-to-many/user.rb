@@ -1,26 +1,26 @@
 class User
 
-    attr_reader :username
+    attr_reader :username, :tweets
 
     def initialize(username)
         @username = username
-        @tweets = []
+        # @tweets = []
     end
 
     # def username
     #     @username
     # end
 
-    def post_tweet(message)
-        #create a new tweet
-        tweet = Tweet.new(message)
-        #add that tweet instance to this user's collection of tweets
-        @tweets << tweet
-        tweet
+    def tweets
+        Tweet.all.select do |tweet|
+            tweet.user == self
+        end
     end
 
-    def add_tweet(tweet)
-        @tweets << tweet
+    def post_tweet(message)
+        #create a new tweet
+        Tweet.new(message, self)
+        #add that tweet instance to this user's collection of tweets
     end
 
 end
