@@ -17,7 +17,11 @@ Based off of yesterday's code, we're going to add the ability to like a tweet. W
   * `Tweet.all` that returns all the Tweets created.
   * `Tweet#username` that returns the username of the tweet's user
 
-## Objectives
+## Objectives 
+  * Implement both sides of a many to many relationship
+  * Practice keeping groups of data related to classes on the class as a class variable
+  * Demonstrate single source of truth by not storing collections of objects on other objects
+  * Demonstrate single source of truth by not storing one object in multiple collections
 
 ## Deliverables
 
@@ -26,3 +30,19 @@ Based off of yesterday's code, we're going to add the ability to like a tweet. W
   * `#liked_tweets` that returns a collection of all the tweets this user has liked
 * Tweet class
   * `#likers` that returns a collection of all the Users who have liked this tweet
+
+
+# we used to see this
+class_room = ClassRoom.new
+class_room.students # ['ben', 'matt', ..]
+
+# now we see this!
+class_room.students # [<Student @name='ben'>, <Student @name='matt'>, ...]
+
+Student.new(name, class_room)
+
+# something like this....
+Student.new('Alex')
+
+# is really this!
+Student.new(String.new("Alex"))
