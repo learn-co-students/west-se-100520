@@ -2,26 +2,32 @@ class Owner
 
   ALL = []
 
-  def self.all
-    ALL
-  end
-
-  def self.reset_all
-    self.all.clear
-  end
-
-  def self.count
-    self.all.length
-  end
-
+  extend Persistable::ClassMethods # import all class methods from the Persistable module
+  include Persistable::InstanceMethods # include imports all instance level methods
+  
+  # the methods below have been abstracted into the Peristable module
+  
+  # def self.all
+  #   ALL
+  # end
+  
+  # def self.reset_all
+  #   self.all.clear
+  # end
+  
+  # def self.count
+  #   self.all.length
+  # end
+  
   attr_accessor :name, :pets
   attr_reader :species
-
+  
   def initialize(name)
     @name = name
     @species = 'human'
     @pets = {:fishes => [], :dogs => [], :cats => []}
-    ALL << self
+    super
+    # ALL << self
   end
 
   def say_species
