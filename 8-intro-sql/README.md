@@ -61,7 +61,11 @@ ON artists.id = albums.artist_id;
 9. Write the SQL to display artist name, album name and number of tracks on that album
 
 ```sql
-
+SELECT artists.name, albums.title, count(tracks.album_id) AS number_of_tracks
+FROM artists
+JOIN albums ON artists.id = albums.artist_id
+JOIN tracks ON tracks.album_id = albums.id
+GROUP BY album_id;
 ```
 
 10. Write the SQL to return the name of all of the artists in the 'Pop' Genre
