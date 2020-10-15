@@ -46,13 +46,16 @@ UPDATE fans SET name = 'Mohammed Spencer' WHERE name = "Lantz";
 7. Write the SQL to return fans that are not fans of the black eyed peas.
 
 ```sql
-
+SELECT * FROM fans WHERE artist_id IS NOT 169;
 ```
 
 8. Write the SQL to display an artists name next to their album title
 
 ```sql
-
+SELECT artists.name, albums.title
+FROM artists
+JOIN albums
+ON artists.id = albums.artist_id;
 ```
 
 9. Write the SQL to display artist name, album name and number of tracks on that album
