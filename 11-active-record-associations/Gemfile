@@ -6,3 +6,5 @@ gem 'rake'
 gem 'require_all'
 gem 'sqlite3'
 gem 'pry'
+
+gem "byebug", "~> 11.1"
