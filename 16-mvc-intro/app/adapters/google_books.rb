@@ -16,7 +16,7 @@ module GoogleBooks
         book.author = author
         book.title = item['volumeInfo']['title']
         book.snippet = item['volumeInfo']['description']
-
+        # binding.pry
         book.save
       end
     end
