@@ -1,0 +1,24 @@
+<form action="/doctors/<%=@doctor.id%>" method="POST">
+    <input type="hidden" value="PATCH" name="_method">
+    <label for="doctor-name">Doctor Name</label>
+    <input type="text" name="name" id="doctor-name" value="<%= @doctor.name %>"/>
+    <label for="doctor-specialty">Doctor Specialty</label>
+    <input type="text" name="specialty" id="doctor-specialty"/>
+    <input type="submit">
+</form> 
+
+<%= form_tag "/doctors/#{@doctor.id}", method: "PATCH" do %>
+    <%= label_tag :name %>
+    <%= text_field_tag :name, @doctor.name %>
+    <%= label_tag :specialty %>
+    <%= text_field_tag :specialty, @doctor.specialty %>
+    <%= submit_tag %>
+<% end %>
+
+<%= form_for @doctor do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :specialty %>
+    <%= f.text_field :specialty %>
+    <%= f.submit %>
+<% end%>
