@@ -1,0 +1,19 @@
+<%= form_for @cow do |f| %>
+  <% if @cow.errors.any? %>
+    <ul>
+      <% @cow.errors.full_messages.map do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :spots %>
+  <%= f.number_field :spots %>
+  <br>
+  <%= f.collection_select :farmer_id, Farmer.all, :id, :name %>
+  <br>
+  <%= f.submit %>
+<% end %>
