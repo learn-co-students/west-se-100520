@@ -1,0 +1,7 @@
+<h2>Doctor details</h2>
+
+<h5><%= @doctor.name %> - <%= @doctor.specialty %></h5>
+
+<button><%= link_to "Edit doc", edit_doctor_path %></button>
+<%= button_to "Delete", @doctor, method: :delete, data: {confirm: "Are you sure?"} %>
+<button><%= link_to "Home", doctors_path %></button>

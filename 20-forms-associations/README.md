@@ -28,7 +28,7 @@ class Farmer < ApplicationRecord
 end
 ```
 
-- Let's generate a Cow and tell it that it `belongs_to` a farmer: `rails g resource Farmer name spots:integer farmer:references`
+- Let's generate a Cow and tell it that it `belongs_to` a farmer: `rails g resource Cow name spots:integer farmer:references`
 
   - the `farmer:references` generator does a few things for us:
 
