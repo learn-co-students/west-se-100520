@@ -1,0 +1,11 @@
+<h1>Add a cow</h1>
+
+<%= form_for @cow do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :spots %>
+    <%= f.number_field :spots %>
+    <%= f.label :farmer %>
+    <%= f.collection_select :farmer_id, Farmer.all, :id, :name  %>
+    <%= f.submit %>
+<% end %>

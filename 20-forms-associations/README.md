@@ -196,6 +196,16 @@ end
 <% end %>
 ```
 
+
+```erb
+<select name="cow[farmer_id]">
+        <% @farmers.each do |farmer|  %>
+            <option value="<%= farmer.id %>">
+                <%= farmer.name %>
+            </option>
+        <% end %>
+    </select>
+```
 ---
 
 ![](https://media.giphy.com/media/A5pcWMMIEO95S/giphy.gif)
