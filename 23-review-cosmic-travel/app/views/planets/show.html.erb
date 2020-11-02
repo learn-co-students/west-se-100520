@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @planet.name %>
+</p>
+
+<p>
+  <strong>Light years from earth:</strong>
+  <%= @planet.distance_from_earth %>
+</p>
+
+<p>
+  <strong>Nearest star:</strong>
+  <%= @planet.nearest_star %>
+</p>
+
+<%= link_to 'Edit', edit_planet_path(@planet) %> |
+<%= link_to 'Back', planets_path %>
