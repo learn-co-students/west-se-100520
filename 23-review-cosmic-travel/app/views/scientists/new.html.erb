@@ -1,0 +1,14 @@
+<h1>New scientist</h1>
+
+<%= form_for @scientist do |f| %>
+    <% if @scientist.errors.any? %>
+        <% @scientist.errors.full_messages.each do |msg| %>
+            <p><%= msg %></p>
+        <% end %>
+    <% end %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :field_of_study %>
+    <%= f.text_field :field_of_study %>
+    <%= f.submit %>
+<% end %>
