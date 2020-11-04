@@ -1,0 +1,15 @@
+<h1>Recipe: <%= @recipe.name %></h1>
+<h2>Meal: <%= @recipe.meal_type %></h2>
+<h3>by: <%= link_to @recipe.user.name, @recipe.user %></h3>
+
+ <h3>Ingredients: </h3>
+
+ <ul>
+    <% @recipe.recipe_ingredients.each do |ri| %>
+        <li><%= link_to ri.ingredient.name, ri.ingredient %>: <%= ri.measurement%></li>
+    <% end %>
+ </ul>
+
+ <p><%= link_to "Add an ingredient", new_recipe_ingredient_path %></p>
+ <p><%= link_to "Edit this recipe", edit_recipe_path(@recipe) %></p>
+ <%= button_to "Delete this recipe", @recipe, method: :delete, data: {confirm: "Are you sure?"} %>

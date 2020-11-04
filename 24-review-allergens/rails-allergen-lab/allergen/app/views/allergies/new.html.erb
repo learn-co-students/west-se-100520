@@ -1,0 +1,9 @@
+<h1>Add an allergy</h1>
+
+<%= form_for @allergy do |f| %>   
+    <%= f.label :user %>
+    <%= f.collection_select :user_id, User.all, :id, :name %>
+    <%= f.label :ingredient %>
+    <%= f.collection_select :ingredient_id, Ingredient.all, :id, :name %>
+    <%= f.submit %>
+<% end %>

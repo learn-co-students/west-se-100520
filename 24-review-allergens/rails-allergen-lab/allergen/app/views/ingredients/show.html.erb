@@ -1,0 +1,16 @@
+<h1>Ingredient: <%= @ingredient.name %></h1>
+
+<h3><%= @ingredient.name %> appears in these recipes: </h3>
+
+<ul>
+    <% @ingredient.recipes.each do |r| %>
+        <li><%= link_to r.name, r %></li>
+    <% end %>
+</ul>
+
+<h4>Users allergic to <%= @ingredient.name %>:</h4>
+<ul>
+    <% @ingredient.users.each do |u| %>
+        <li><%= link_to u.name, u %></li>
+    <% end %>
+</ul>

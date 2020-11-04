@@ -1,0 +1,11 @@
+<h1>All the recipes!</h1>
+
+<ol>
+    <% @recipes.each do |r| %>
+        <li><%= link_to r.name, r %></li>
+    <% end %>
+</ol>
+<%= form_tag recipes_path, method: :get do %>
+    <%= submit_tag "Sort by number of ingreds", name: :sort%>
+<% end %>
+<%= link_to "Create a recipe", new_recipe_path %>

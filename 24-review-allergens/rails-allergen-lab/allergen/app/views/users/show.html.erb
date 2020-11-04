@@ -1,0 +1,20 @@
+<h1>User: <%= @user.name %></h1>
+
+<h2>Allergies: </h2>
+
+<ul>
+    <% @user.allergies.each do |a| %>
+        <li><%= link_to a.ingredient.name, a.ingredient %> <%= button_to "Remove", a, method: :delete %></li>
+    <% end%>
+</ul>
+
+<h2>Recipies: </h2>
+
+<ul>
+    <% @user.recipes.each do |r| %>
+        <li><%= link_to r.name, r %></li>
+    <% end%>
+</ul>
+
+<%= link_to "Add an allergy", new_allergy_path %>
+<%= button_to "Delete this user", @user, method: :delete %>

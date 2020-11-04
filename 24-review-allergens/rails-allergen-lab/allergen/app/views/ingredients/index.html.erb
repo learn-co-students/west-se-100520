@@ -1,0 +1,8 @@
+<h1>All the ingredients!</h1>
+
+<ol>
+    <% @ingredients.each do |i| %>
+        <li><%= link_to i.name, i %> has <%= i.users.count%> people with allergies</li>
+    <% end %>
+</ol>
+
