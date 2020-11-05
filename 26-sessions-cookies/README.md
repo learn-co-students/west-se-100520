@@ -10,3 +10,4 @@ We can check in our controller whether the user answered correctly or not, but h
 
 - [Rails Docs on Sessions](https://guides.rubyonrails.org/security.html#sessions)
 - [Wiki Page on HTTP Headers](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
+- [Ruby Monsta Tutorial on Sessions](https://webapps-for-beginners.rubymonstas.org/sessions.html)
