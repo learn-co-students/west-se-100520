@@ -1,0 +1,7 @@
+<div>
+    <p># of Puppies: <%= dogs.count{|dog| dog.age <= 1}%></p>
+    <p># of Mutts: <%= dogs.count{|dog| dog.breed.downcase == 'mutt'}%></p>
+    <p># of Males: <%= dogs.count{|dog| dog.sex == 'M'}%></p>
+    <p># of Females: <%= dogs.count{|dog| dog.sex == 'F'}%></p>
+</div>
+

@@ -27,9 +27,4 @@
 <% end %>
 </table>
 
-<div>
-    <p># of Puppies: <%= @shelter.dogs.count{|dog| dog.age <= 1}%></p>
-    <p># of Mutts: <%= @shelter.dogs.count{|dog| dog.breed.downcase == 'mutt'}%></p>
-    <p># of Males: <%= @shelter.dogs.count{|dog| dog.sex == 'M'}%></p>
-    <p># of Females: <%= @shelter.dogs.count{|dog| dog.sex == 'F'}%></p>
-</div>
+<%= render partial: 'dogs/stats', locals: {dogs: @shelter.dogs} %>

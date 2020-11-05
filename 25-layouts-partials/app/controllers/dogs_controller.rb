@@ -1,5 +1,5 @@
 class DogsController < ApplicationController
-
+  # layout false
   def new
     @dog = Dog.new
   end
@@ -15,6 +15,7 @@ class DogsController < ApplicationController
 
   def show
     @dog = Dog.find(params[:id])
+    render layout:false
   end
 
   def adopt
