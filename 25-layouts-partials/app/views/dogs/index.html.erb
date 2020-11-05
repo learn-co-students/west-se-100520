@@ -1,0 +1,57 @@
+<h1>Dogs up for Adoption:</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Breed</th>
+    <th>Age</th>
+    <th>Sex</th>
+    <th>Shelter</th>
+    <th>Adopt</th>
+  </tr>
+<% Dog.all.each do |dog|%>
+  <% if !dog.owner %>
+  <tr>
+    <td><strong><%=link_to dog.name, dog_path(dog)%></strong></td>
+    <td><%=dog.breed%></td>
+    <td><%= dog.age%></td>
+    <% if dog.sex == 'M' %>
+    <td>male</td>
+    <% else %>
+    <td>female</td>
+    <% end %>
+    <td><%= link_to dog.shelter.name, shelter_path(dog.shelter) %></td>
+    <td><button><a href="/dogs/<%=dog.id%>/adopt">Adopt Me!</a></button> </td>
+  </tr>
+  <% end %>
+<% end %>
+</table>
+
+
+<h1>Adopted Dogs:</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Breed</th>
+    <th>Age</th>
+    <th>Sex</th>
+    <th>Owner</th>
+    <th>Abandon</th>
+  </tr>
+<% Dog.all.each do |dog|%>
+  <% if dog.owner %>
+  <tr>
+    <td><strong><%=link_to dog.name, dog_path(dog)%></strong></td>
+    <td><%=dog.breed%></td>
+    <td><%= dog.age%></td>
+    <% if dog.sex == 'M' %>
+    <td>male</td>
+    <% else %>
+    <td>female</td>
+    <% end %>
+    <td><%= link_to dog.owner.name, owner_path(dog.owner) %></td>
+    <td><button><a href="/dogs/<%=dog.id%>/abandon">Abandon Me!</a>
+  </tr>
+  </tr>
+  <% end %>
+<% end %>
+</table>

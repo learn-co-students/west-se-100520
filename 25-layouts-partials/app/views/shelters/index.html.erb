@@ -1,0 +1,38 @@
+<h1>All Shelters</h1>
+
+<% Shelter.all.each do |shelter| %>
+  <h3><%= link_to shelter.name, shelter_path(shelter) %></h3>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Breed</th>
+      <th>Age</th>
+      <th>Sex</th>
+      <th>Shelter</th>
+      <th>Adopt</th>
+    </tr>
+  <% shelter.dogs.each do |dog|%>
+    <% if !dog.owner %>
+    <tr>
+      <td><strong><%= link_to dog.name, dog_path(dog) %></strong></td>
+      <td><%=dog.breed%></td>
+      <td><%= dog.age%></td>
+      <% if dog.sex == 'M' %>
+      <td>male</td>
+      <% else %>
+      <td>female</td>
+      <% end %>
+      <td><%= dog.shelter.name %></td>
+      <td><button><%= link_to "Adopt Me!", "/dogs/#{dog.id}/adopt" %> </button> </td>
+    </tr>
+    <% end %>
+  <% end %>
+  </table>
+  <div>
+    <p># of Puppies: <%= shelter.dogs.count{|dog| dog.age <= 1}%></p>
+    <p># of Mutts: <%= shelter.dogs.count{|dog| dog.breed.downcase == 'mutt'}%></p>
+    <p># of Males: <%= shelter.dogs.count{|dog| dog.sex == 'M'}%></p>
+    <p># of Females: <%= shelter.dogs.count{|dog| dog.sex == 'F'}%></p>
+</div>
+<% end %>

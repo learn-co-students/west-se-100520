@@ -1,0 +1,35 @@
+<h1>All Owners:</h1>
+
+<% Owner.all.reject{|owner| owner.dogs.length == 0}.each do |owner| %>
+  <h2><%= owner.name %>'s dogs:</h2>
+  <table>
+      <tr>
+        <th>Name</th>
+        <th>Breed</th>
+        <th>Age</th>
+        <th>Sex</th>
+        <th>Owner</th>
+        <th>Abandon</th>
+      </tr>
+    <% owner.dogs.each do |dog|%>
+      <tr>
+        <td><strong><%=link_to dog.name, dog_path(dog)%></strong></td>
+        <td><%=dog.breed%></td>
+        <td><%= dog.age%></td>
+        <% if dog.sex == 'M' %>
+        <td>male</td>
+        <% else %>
+        <td>female</td>
+        <% end %>
+        <td><%= dog.owner.name%></td>
+        <td><button><%= link_to "Abandon", "/dogs/#{dog.id}/abandon" %> </button> </td>
+      </tr>
+      <% end %>
+    </table>
+    <div>
+      <p># of Puppies: <%= owner.dogs.count{|dog| dog.age <= 1}%></p>
+      <p># of Mutts: <%= owner.dogs.count{|dog| dog.breed.downcase == 'mutt'}%></p>
+      <p># of Males: <%= owner.dogs.count{|dog| dog.sex == 'M'}%></p>
+      <p># of Females: <%= owner.dogs.count{|dog| dog.sex == 'F'}%></p>
+    </div>
+  <% end %>
