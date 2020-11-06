@@ -62,3 +62,12 @@ Hashing is a little different: the ultimate goal of one-way hashing is that it c
 Hiding this information from ourselves is good. Having access to the actual passwords is a dangerous liability! If someone had access to our database, then they would have the passwords associated with lots of email addresses, which would mean they could steal a ton of people's identities. People are bad at using new passwords for each website, so your password database likely contains people's gmail passwords!
 
 ![](https://media.giphy.com/media/fcaN0b9yGcwbm/giphy.gif)
+
+## External Resources:
+
+- [Multi-factor Authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication)
+- [Huffington Post List of Common Passwords](https://www.huffingtonpost.com/entry/2016-most-common-passwords_us_587f9663e4b0c147f0bc299d)
+- [BCrypt gem on github](https://github.com/codahale/bcrypt-ruby#why-you-should-use-bcrypt)
+- [BCrypt Password class source code](https://github.com/codahale/bcrypt-ruby/blob/master/lib/bcrypt/password.rb#L23)
+- [Rails Docs on security](https://guides.rubyonrails.org/security.html#sessions)
+- [Rails Docs on has_and_belongs_to_many](https://guides.rubyonrails.org/association_basics.html#the-has-and-belongs-to-many-association)

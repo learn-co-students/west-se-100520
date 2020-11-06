@@ -10,6 +10,17 @@
   </head>
 
   <body>
+  
+    <% flash.each do |k, v|  %>
+      <p class="<%= k %>"><%= v %></p>
+    <% end %>
+  
+  <% if logged_in? %>
+    <%= link_to 'Logout', sessions_path, method: :delete %>
+  <% else%>
+    <%= link_to 'Sign up', signup_path %>
+    <%= link_to 'Log In', login_path %>
+  <% end %>
     <%= yield %>
   </body>
 </html>

@@ -1,0 +1,9 @@
+<% if logged_in? %>
+<h1>Welcome, <%= current_user.username %>!</h1>
+<% end %>
+
+<ul>
+    <% @posts.each do |post| %>
+        <li>Title: <%= post.title %> - <%= post.content %></li>
+    <% end %>
+</ul>
