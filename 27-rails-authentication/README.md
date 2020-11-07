@@ -63,6 +63,44 @@ Hiding this information from ourselves is good. Having access to the actual pass
 
 ![](https://media.giphy.com/media/fcaN0b9yGcwbm/giphy.gif)
 
+#### Deep Dive into BCrypt and `has_secure_password`
+
+- `BCrypt` allows us to [salt](<https://en.wikipedia.org/wiki/Salt_(cryptography)>) users' plaintext passwords before
+  running them through a [hashing function](https://en.wikipedia.org/wiki/Cryptographic_hash_function). A hashing
+  function is, basically, a _one way_ function. Similar to putting something in a meat grinder; we cannot _feasibly_
+  reconstruct something that's been ground up by a meat grinder. We then store these passwords that have been 'digested'
+  by `BCrypt` in our database.
+  **[Never ever ever store your users' plaintext passwords in your database](https://blog.mozilla.org/webdev/2012/06/08/lets-talk-about-password-storage/).
+  It's bad form and should be avoided at all costs.**
+
+### Using `bcrypt` to create passwords in Rails
+
+What's cool about `bcrypt`? By design, it's slow. This means that anyone who wants to crack it has to take a long time
+to brute-force passwords. It also allows you to define a column called `password_digest` and it will do the rest of the
+work.
+
+_Remember, convention over configuration._ And especially in this case, we generally don't have the time or energy to
+build our own encryption that surpasses what already exists.
+
+After installing the `bcrypt` gem, you can use a macro in your `user` model called `has_secure_password`, which does a
+lot of the integration for you. Go in and test this in the console. You can show how the `user` model ends up with a
+`password_digest` attribute even though you send in `password` through the `create`. Do it again, this time with a
+`password_confirmation` in the initialization hash. You can show how rails rejects the transaction.
+
+### Sessions and cookies
+
+How does an application keep you logged in between requests? Remember, requests are stateless, so sessions allow us to
+provide a user a sense of continuity as the interact with the website.
+
+How do cookies fit into this? Ultimately, they're just key-value pairs. Each website has it's own cookies. Cookies
+aren't secure, because they're not necessarily encrypted. We want to limit the amount and type of information stored in
+cookies. Rails automatically stores and encrypts the session id in our cookie.
+
+What information do we want to store in the cookie?
+
+Sessions aren't really stored in the database, so we don't use a model for them. However, they still need routes, a
+controller and view
+
 ## External Resources:
 
 - [Multi-factor Authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication)

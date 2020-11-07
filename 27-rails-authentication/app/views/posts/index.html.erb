@@ -4,6 +4,10 @@
 
 <ul>
     <% @posts.each do |post| %>
-        <li>Title: <%= post.title %> - <%= post.content %></li>
+        <li>Title: <%= post.title %> - <%= post.content %> by <%= post.user.username %>
+        <%= link_to "Edit", edit_post_path(post) %>
+        <%= button_to "Delete", post, method: :delete %></li>
     <% end %>
 </ul>
+
+<%= link_to "Add a post", new_post_path %>

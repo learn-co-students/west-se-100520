@@ -1,0 +1,15 @@
+
+<%= form_with model:post, local: true do |f| %>
+<% if post.errors.any? %>
+    <ul>
+        <% post.errors.full_messages.each do |m|%>
+            <li class="danger"><%= m %></li>
+        <% end%>
+    </ul>
+<% end %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+    <%= f.submit %>
+<% end %>
