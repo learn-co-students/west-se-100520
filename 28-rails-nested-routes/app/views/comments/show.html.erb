@@ -1,0 +1,8 @@
+<h1>Comment <%= @comment.id%></h1>
+
+
+<div>
+  <%=@comment.user.username%> says:
+  <strong><%=@comment.text%></strong> <br>
+  about <%=@comment.visit.user.username%>'s trip to <%=@comment.visit.state.name%>
+ </div>

@@ -1,0 +1,9 @@
+<h1>All states:</h1>
+
+<ol>
+<% @states.order_alpha.each do |state| %>
+  <li>
+    <%=link_to state.name, state_path(state)%>
+  </li>
+<% end %>
+</ol>

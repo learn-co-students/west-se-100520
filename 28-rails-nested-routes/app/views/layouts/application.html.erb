@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsStateTracker</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav>
+
+  <% if current_user.nil? %>
+    <%= link_to "Log In", login_path, :class => "btn btn-primary" %>
+    <%= link_to "Sign Up", signup_path, :class => "btn btn-primary" %>
+  <% else %>
+    <%= link_to "Home", user_path(current_user) %>
+    <%= link_to "Log Out", logout_path, method: 'delete' %>
+    <%= link_to "All States", states_path %>
+    <%= link_to "Add a Visit", new_visit_path %>
+    <%= link_to "All Visits", visits_path %>
+    <%= link_to "Add a Comment", new_comment_path %>
+    <%= link_to "All Comments", comments_path %>
+
+
+  <% end %>
+</nav>
+
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+<h1><%=@state.name%></h1>
+
+<ul>
+  <% @state.visits.each do |visit| %>
+  <li><%= visit.user.username %> gave it a rating of <%= visit.rating%>/10</li>
+  <% end %>
+</ul>

@@ -1,0 +1,24 @@
+<h2>Add a Comment</h2>
+<% if @comment.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@comment.errors.count, "error") %>
+      prohibited you from saving:
+    </h2>
+
+    <ul>
+    <% @comment.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
+<%= form_for @comment do |f| %>
+
+Visit: <%= f.collection_select( :visit_id, Visit.all, :id, :name) %> <br><br>
+Comment: <%= f.text_field :text %> <br><br>
+
+<%= f.submit  %>
+<% end %>

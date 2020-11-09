@@ -1,0 +1,14 @@
+<h1><%=@visit.name%></h1>
+<h3>Rating: <%= @visit.rating%>/10</h3>
+<div>
+  <h3>Comments:</h3>
+  <ul>
+  <% @visit.comments.each do |comment|%>
+    <li>
+      <%= comment.user.username%> says:
+      <strong><%= comment.text %></strong>
+    </li>
+
+  <% end %>
+  </ul>
+</div>

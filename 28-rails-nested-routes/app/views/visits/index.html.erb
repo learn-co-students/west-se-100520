@@ -1,0 +1,16 @@
+<h1>All Visits</h1>
+
+<ul>
+<% @visits.each do |visit| %>
+  <li>
+    <%=visit.user.username%> visited <%=visit.state.name%> and gave it a rating of <%=visit.rating%>
+
+    <%= link_to "View Visit", visit_path(visit.id)%>
+
+    <%= link_to "Edit Visit", edit_visit_path(visit) if visit.user == current_user%>
+
+  </li>
+<% end %>
+</ul>
+
+

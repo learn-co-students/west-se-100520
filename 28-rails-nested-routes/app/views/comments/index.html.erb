@@ -1,0 +1,7 @@
+<h1>All Comments:</h1>
+
+<ul>
+<% @comments.each do |comment| %>
+  <li><%=comment.user.username%> says: <strong><%=comment.text%></strong> about <%=comment.visit.user.username%>'s trip to <%=comment.visit.state.name%></li>
+<% end %>
+</ul>

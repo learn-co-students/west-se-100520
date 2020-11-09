@@ -1,0 +1,8 @@
+<h1><%= @user.username%></h1>
+
+<h3>All the states you have visited:</h3>
+<ol>
+  <% @user.states.uniq.each do |state| %>
+    <li><%= state.name%></li>
+  <% end %>
+</ol>

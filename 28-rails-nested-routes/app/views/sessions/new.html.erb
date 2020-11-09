@@ -1,0 +1,13 @@
+<h2>Log In Below</h2>
+
+  <p><%= @error %></p>
+
+
+<%= form_for :user, url: '/login' do |f| %>
+Username: <%= f.text_field :username %>
+Password: <%= f.password_field :password %>
+<%= f.submit "Log In" %>
+<% end %>
+
+
+<h4>Or <%= link_to("sign Up", new_user_path) %></h4>
