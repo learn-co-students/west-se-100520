@@ -3,7 +3,10 @@
 <ol>
 <% @states.order_alpha.each do |state| %>
   <li>
-    <%=link_to state.name, state_path(state)%>
+    <%=link_to state.name, state_path(state)%> - 
+    <%=link_to "See Visits", state_visits_path(state) %> -
+    <%=link_to "Add Visits", new_state_visit_path(state) %>
+
   </li>
 <% end %>
 </ol>

@@ -2,7 +2,12 @@ class VisitsController < ApplicationController
   before_action :if_not_logged_in, only: [:create, :new, :edit, :update]
 
   def new
-    @visit = current_user.visits.build
+    id = params[:state_id]
+    if id && @state = State.find_by_id(id)
+      @visit = @state.visits.build
+    else
+      @visit = current_user.visits.build
+    end
   end
 
   def create
@@ -15,8 +20,15 @@ class VisitsController < ApplicationController
   end
 
   def index
-    @visits = Visit.all
+    # byebug
+    id = params[:state_id]
+    if id && @state = State.find_by_id(id)
+       @visits = @state.visits
+    else
+      @visits = Visit.all
+    end
   end
+
 
 
   def show
