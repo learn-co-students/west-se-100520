@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @project.name %>
+</p>
+
+<p>
+  <strong>Due date:</strong>
+  <%= @project.due_date %>
+</p>
+
+ <ul>
+      <% @project.tasks.each do |t| %>
+      
+        <li><%= t.name %> - <%= t.complete ? "Done" : "Not Done" %></li>
+    
+      <% end %>
+  </ul>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
