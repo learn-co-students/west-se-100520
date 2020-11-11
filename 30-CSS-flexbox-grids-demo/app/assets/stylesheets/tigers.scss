@@ -1,0 +1,56 @@
+// Place all the styles related to the Tigers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+body {
+    background-color: rgb(186, 161, 161);
+}
+
+#main {
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 5%;
+    height: 90vh;
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer";
+}
+
+#one {
+    border: 1px solid red;
+    padding: 5px;
+    grid-row: 2;
+    grid-column: 4;
+    // redundant
+    grid-area: sidebar;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border-radius: 15px;
+    background-color: rgb(87, 81, 81);
+    color: red;
+}
+
+#one:hover {
+background-color: black;
+}
+
+.inactive {
+    color: grey
+}
+
+#two {
+    grid-row: 1;
+    grid-column: 4 span;
+    text-align: center;
+}
+
+
+// grid-template-areas: 
+// "a a a"
+// "b b b"
+// "c c c";
+// grid-template-columns: repeat(10, 10%);
