@@ -1,0 +1,22 @@
+<div class="container">
+    <h1 class="display-4">Add a sundae!</h1>
+</div>
+
+<div class="container p-3 my-3 border">
+    <%= form_with model: @sundae, local: true do |f| %>
+        <div class="form-group">
+            <%= f.label :flavor %>
+            <%= f.text_field :flavor, class: "form-control" %>
+        </div>
+        <div class="form-group">
+            <%= f.label :topping %>
+            <%= f.text_field :topping, class: "form-control" %>
+        </div>
+        <div class="form-group">
+            <%= f.label :scoops %>
+            <%= f.number_field :scoops, class: "form-control" %>
+        </div>
+        <%= f.submit "Make sundae", class: "btn btn-outline-success" %>
+    <% end %>
+
+</div>
