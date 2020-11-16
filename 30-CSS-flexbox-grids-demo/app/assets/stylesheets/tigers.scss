@@ -48,6 +48,13 @@ background-color: black;
     text-align: center;
 }
 
+.inactive {
+    background-color: yellow;
+}
+
+.terrible:hover {
+    background-color: hotpink;
+}
 
 // grid-template-areas: 
 // "a a a"
