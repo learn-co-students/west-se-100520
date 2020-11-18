@@ -55,16 +55,22 @@
       "id": 8
     },
     {
-      "title": "The Fifth Season",
-      "author": "N.K. Jemisin",
-      "img": "https://images-na.ssl-images-amazon.com/images/I/61XfS2XCw3L._SL160_SX135_.jpg",
+      "title": "The Two Towers",
+      "author": "Tolkein",
+      "img": "https://m.media-amazon.com/images/I/A1cna4yDZML._AC_UY218_.jpg",
       "id": 9
     },
     {
-      "title": "The Fifth Season",
-      "author": "N.K. Jemisin",
-      "img": "https://images-na.ssl-images-amazon.com/images/I/61XfS2XCw3L._SL160_SX135_.jpg",
+      "title": "The Hobbit",
+      "author": "Tolkein",
+      "img": "https://m.media-amazon.com/images/I/A1cna4yDZML._AC_UY218_.jpg",
       "id": 10
+    },
+    {
+      "title": "Return of the King",
+      "author": "T",
+      "img": "https://m.media-amazon.com/images/I/A1cna4yDZML._AC_UY218_.jpg",
+      "id": 11
     }
   ]
 }

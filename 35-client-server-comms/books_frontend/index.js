@@ -44,15 +44,20 @@ const bookURL = 'http://localhost:3000/books'
 //     showBooks(myjson)
 //   })
 
-fetch(bookURL)
-  .then((response) => response.json())
-  .then((myjson) => showBooks(myjson))
+document.addEventListener("DOMContentLoaded", fetchAndShowBooks)
 
-function createBook() {
+function fetchAndShowBooks(){
+  fetch(bookURL)
+    .then((response) => response.json())
+    .then((myjson) => showBooks(myjson))
+
+}
+
+function createBook(title, author, cover, e) {
   const newBook = {
-    title: 'The Fifth Season',
-    author: 'N.K. Jemisin',
-    img: 'https://images-na.ssl-images-amazon.com/images/I/61XfS2XCw3L._SL160_SX135_.jpg'
+    title: title,
+    author: author,
+    img: cover
   }
   const options = {
     method: 'POST',
@@ -62,6 +67,17 @@ function createBook() {
     body: JSON.stringify(newBook)
   }
   fetch(bookURL, options)
+    .then(fetchAndShowBooks())
+    .then(e.target.reset())
 }
 
-createBook()
+const form = document.querySelector("form")
+form.addEventListener('submit', getFormData)
+
+function getFormData(event){
+  event.preventDefault()
+  const title = document.querySelector('input[name="title"]').value
+  const author = document.querySelector('input[name="author"]').value
+  const cover = document.querySelector('input[name="cover"]').value
+  createBook(title, author, cover, event)
+}
