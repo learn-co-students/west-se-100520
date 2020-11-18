@@ -1,6 +1,7 @@
 {
   "books": [
     {
+      "id": 1,
       "title": "Soul Kiss",
       "author": "Shay Youngblood",
       "img":
@@ -8,6 +9,7 @@
     },
 
     {
+      "id": 2,
       "title": "Children of Blood & Bone",
       "author": "Tomi Adeyemi",
       "img":
@@ -15,6 +17,7 @@
     },
 
     {
+      "id": 3,
       "title": "White Teeth",
       "author": "Zadie Smith",
       "img":
@@ -22,12 +25,14 @@
     },
 
     {
+      "id": 4,
       "author": "Zadie Smith",
       "img":
         "https://images-na.ssl-images-amazon.com/images/I/41oS2tKs2TL._SX324_BO1,204,203,200_.jpg",
       "title": "On Beauty"
     },
     {
+      "id": 5,
       "author": "Zadie Smith",
       "img":
         "https://images-na.ssl-images-amazon.com/images/I/51Vfwe7%2BJ5L._SX324_BO1,204,203,200_.jpg",
@@ -35,6 +40,7 @@
     },
 
     {
+      "id": 5,
       "author": "Zadie Smith",
       "img":
         "https://images-na.ssl-images-amazon.com/images/I/517BqHtwIKL._SX324_BO1,204,203,200_.jpg",
@@ -42,6 +48,7 @@
     },
 
     {
+      "id": 6,
       "author": "Maya Angelou",
       "img":
         "https://images-na.ssl-images-amazon.com/images/I/41SKsBaGXRL._SX301_BO1,204,203,200_.jpg",
@@ -49,6 +56,7 @@
     },
 
     {
+      "id": 7,
       "author": "Toni Morrison ",
       "img":
         "https://images-na.ssl-images-amazon.com/images/I/413-xT0izBL._SX322_BO1,204,203,200_.jpg",
