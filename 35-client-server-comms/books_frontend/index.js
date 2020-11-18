@@ -32,4 +32,36 @@ function showBooks(bookArray) {
 }
 
 // what happens when books isn't defined?
-showBooks(books);
+// showBooks(books);
+const bookURL = 'http://localhost:3000/books'
+// fetch(bookURL)
+//   .then(function(response){
+//     console.log(response)
+//        return response.json()
+//     })
+//   .then(function(myjson){
+//     console.log(myjson)
+//     showBooks(myjson)
+//   })
+
+fetch(bookURL)
+  .then((response) => response.json())
+  .then((myjson) => showBooks(myjson))
+
+function createBook() {
+  const newBook = {
+    title: 'The Fifth Season',
+    author: 'N.K. Jemisin',
+    img: 'https://images-na.ssl-images-amazon.com/images/I/61XfS2XCw3L._SL160_SX135_.jpg'
+  }
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': "application/json"
+    },
+    body: JSON.stringify(newBook)
+  }
+  fetch(bookURL, options)
+}
+
+createBook()
