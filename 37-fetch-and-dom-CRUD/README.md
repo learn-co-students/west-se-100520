@@ -14,10 +14,10 @@ Gotta `fetch`'em All!
 
 Expand the functionality of the JS Pokemon Search Assignment!
 
-- [ ] As a user, I should see all the Pokemon
-- [ ] As a user, I should be able to delete a Pokemon on click of a button
-- [ ] As a user, I should be able to create my own Pokemon
-- [ ] As a user, I should be able to edit a clicked Pokemon
+- [x ] As a user, I should see all the Pokemon
+- [x ] As a user, I should be able to delete a Pokemon on click of a button
+- [x ] As a user, I should be able to create my own Pokemon
+- [x ] As a user, I should be able to edit a clicked Pokemon
 
 These changes should _persist_ in our database.
 
