@@ -72,8 +72,6 @@
         }
     }
 
-    
-
     function submitComment(event){
         // adds a comment to
         event.preventDefault()
@@ -83,9 +81,6 @@
         commentForm.reset()
         list.appendChild(theComment)
     }
-
     
-
-
     startTimer()
 })()
