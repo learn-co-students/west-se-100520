@@ -1,0 +1,1712 @@
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSpecies (20201120175339)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "species" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201120175339"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAnimals (20201120175452)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "animals" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "gender" varchar, "species_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_8c21b45993"
+FOREIGN KEY ("species_id")
+  REFERENCES "species" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_animals_on_species_id" ON "animals" ("species_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201120175452"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-11-20 17:57:28.173625"], ["updated_at", "2020-11-20 17:57:28.173625"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecies Create (0.3ms)[0m  [1m[32mINSERT INTO "species" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Dog"], ["created_at", "2020-11-20 17:58:26.123419"], ["updated_at", "2020-11-20 17:58:26.123419"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecies Create (0.2ms)[0m  [1m[32mINSERT INTO "species" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Dolphin"], ["created_at", "2020-11-20 17:58:26.126874"], ["updated_at", "2020-11-20 17:58:26.126874"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecies Create (0.2ms)[0m  [1m[32mINSERT INTO "species" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ferret"], ["created_at", "2020-11-20 17:58:26.129685"], ["updated_at", "2020-11-20 17:58:26.129685"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnimal Create (0.4ms)[0m  [1m[32mINSERT INTO "animals" ("name", "gender", "species_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Panther-Winfield"], ["gender", 0], ["species_id", 1], ["created_at", "2020-11-20 17:58:26.149137"], ["updated_at", "2020-11-20 17:58:26.149137"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnimal Create (0.2ms)[0m  [1m[32mINSERT INTO "animals" ("name", "gender", "species_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Charlotte"], ["gender", 1], ["species_id", 1], ["created_at", "2020-11-20 17:58:26.152700"], ["updated_at", "2020-11-20 17:58:26.152700"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnimal Create (0.3ms)[0m  [1m[32mINSERT INTO "animals" ("name", "gender", "species_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Charlie"], ["gender", 0], ["species_id", 2], ["created_at", "2020-11-20 17:58:26.155407"], ["updated_at", "2020-11-20 17:58:26.155407"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnimal Create (0.2ms)[0m  [1m[32mINSERT INTO "animals" ("name", "gender", "species_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Eunice"], ["gender", 1], ["species_id", 3], ["created_at", "2020-11-20 17:58:26.158250"], ["updated_at", "2020-11-20 17:58:26.158250"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-11-20 09:59:13 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/lantz/.rvm/gems/ruby-2.6.3/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/lantz/.rvm/gems/ruby-2.6.3/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.3ms | Allocations: 480)
+Completed 200 OK in 17ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 2630)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 09:59:19 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/animals"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/animals" for ::1 at 2020-11-20 10:03:21 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AnimalsController#index as HTML
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 10.4ms | ActiveRecord: 1.4ms | Allocations: 7145)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 10:04:43 -0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AnimalsController#index as HTML
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.5ms | Allocations: 6255)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 10:05:16 -0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AnimalsController#index as HTML
+  [1m[36mAnimal Load (0.2ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 36ms (Views: 31.4ms | ActiveRecord: 1.9ms | Allocations: 15381)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 10:05:49 -0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AnimalsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1436)
+
+
+  
+NoMethodError (undefined method `name' for :species:Symbol):
+  
+app/controllers/animals_controller.rb:5:in `index'
+Started GET "/animals" for ::1 at 2020-11-20 10:06:17 -0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AnimalsController#index as HTML
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 1.4ms | Allocations: 13288)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 10:07:08 -0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AnimalsController#index as HTML
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.3ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 1.5ms | Allocations: 13215)
+
+
+Started GET "/species" for ::1 at 2020-11-20 10:09:38 -0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/species"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/species" for ::1 at 2020-11-20 10:10:09 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.6ms | Allocations: 4360)
+
+
+Started GET "/species" for ::1 at 2020-11-20 10:10:57 -0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.6ms | Allocations: 4268)
+
+
+Started GET "/species" for ::1 at 2020-11-20 10:11:20 -0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.5ms | Allocations: 6080)
+
+
+  
+NoMethodError (undefined method `animals' for #<Species:0x00007f8fdcb8fb50>):
+  
+app/controllers/species_controller.rb:4:in `index'
+Started GET "/species" for ::1 at 2020-11-20 10:12:18 -0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:4:in `index'
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."species_id" = ?[0m  [["species_id", 1]]
+  ↳ app/controllers/species_controller.rb:4:in `index'
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."species_id" = ?[0m  [["species_id", 2]]
+  ↳ app/controllers/species_controller.rb:4:in `index'
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."species_id" = ?[0m  [["species_id", 3]]
+  ↳ app/controllers/species_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 24.3ms | ActiveRecord: 1.1ms | Allocations: 15863)
+
+
+Started GET "/species" for ::1 at 2020-11-20 10:13:22 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:4:in `index'
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."species_id" = ?[0m  [["species_id", 1]]
+  ↳ app/controllers/species_controller.rb:4:in `index'
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."species_id" = ?[0m  [["species_id", 2]]
+  ↳ app/controllers/species_controller.rb:4:in `index'
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."species_id" = ?[0m  [["species_id", 3]]
+  ↳ app/controllers/species_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 1.2ms | Allocations: 12853)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnimal Destroy (0.3ms)[0m  [1m[31mDELETE FROM "animals" WHERE "animals"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnimal Destroy (0.2ms)[0m  [1m[31mDELETE FROM "animals" WHERE "animals"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnimal Destroy (0.2ms)[0m  [1m[31mDELETE FROM "animals" WHERE "animals"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnimal Destroy (0.2ms)[0m  [1m[31mDELETE FROM "animals" WHERE "animals"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecies Destroy (0.2ms)[0m  [1m[31mDELETE FROM "species" WHERE "species"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecies Destroy (0.2ms)[0m  [1m[31mDELETE FROM "species" WHERE "species"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecies Destroy (0.2ms)[0m  [1m[31mDELETE FROM "species" WHERE "species"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecies Create (0.2ms)[0m  [1m[32mINSERT INTO "species" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Dog"], ["created_at", "2020-11-20 18:14:35.454236"], ["updated_at", "2020-11-20 18:14:35.454236"]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecies Create (0.2ms)[0m  [1m[32mINSERT INTO "species" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Dolphin"], ["created_at", "2020-11-20 18:14:35.457022"], ["updated_at", "2020-11-20 18:14:35.457022"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecies Create (0.2ms)[0m  [1m[32mINSERT INTO "species" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ferret"], ["created_at", "2020-11-20 18:14:35.459640"], ["updated_at", "2020-11-20 18:14:35.459640"]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnimal Create (0.3ms)[0m  [1m[32mINSERT INTO "animals" ("name", "gender", "species_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Panther-Winfield"], ["gender", 0], ["species_id", 4], ["created_at", "2020-11-20 18:14:35.464608"], ["updated_at", "2020-11-20 18:14:35.464608"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnimal Create (0.3ms)[0m  [1m[32mINSERT INTO "animals" ("name", "gender", "species_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Charlotte"], ["gender", 1], ["species_id", 4], ["created_at", "2020-11-20 18:14:35.467601"], ["updated_at", "2020-11-20 18:14:35.467601"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnimal Create (0.3ms)[0m  [1m[32mINSERT INTO "animals" ("name", "gender", "species_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Charlie"], ["gender", 2], ["species_id", 5], ["created_at", "2020-11-20 18:14:35.470370"], ["updated_at", "2020-11-20 18:14:35.470370"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnimal Create (0.2ms)[0m  [1m[32mINSERT INTO "animals" ("name", "gender", "species_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Eunice"], ["gender", 1], ["species_id", 6], ["created_at", "2020-11-20 18:14:35.473093"], ["updated_at", "2020-11-20 18:14:35.473093"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/species" for ::1 at 2020-11-20 10:14:42 -0800
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:4:in `index'
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."species_id" = ?[0m  [["species_id", 4]]
+  ↳ app/controllers/species_controller.rb:4:in `index'
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."species_id" = ?[0m  [["species_id", 5]]
+  ↳ app/controllers/species_controller.rb:4:in `index'
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."species_id" = ?[0m  [["species_id", 6]]
+  ↳ app/controllers/species_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 4299)
+
+
+Started GET "/species" for ::1 at 2020-11-20 10:14:43 -0800
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:4:in `index'
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."species_id" = ?[0m  [["species_id", 4]]
+  ↳ app/controllers/species_controller.rb:4:in `index'
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."species_id" = ?[0m  [["species_id", 5]]
+  ↳ app/controllers/species_controller.rb:4:in `index'
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."species_id" = ?[0m  [["species_id", 6]]
+  ↳ app/controllers/species_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.4ms | Allocations: 4298)
+
+
+Started GET "/species" for ::1 at 2020-11-20 10:14:50 -0800
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:4:in `index'
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."species_id" = ?[0m  [["species_id", 4]]
+  ↳ app/controllers/species_controller.rb:4:in `index'
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."species_id" = ?[0m  [["species_id", 5]]
+  ↳ app/controllers/species_controller.rb:4:in `index'
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."species_id" = ?[0m  [["species_id", 6]]
+  ↳ app/controllers/species_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 4298)
+
+
+Started GET "/" for ::1 at 2020-11-20 10:14:53 -0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/lantz/.rvm/gems/ruby-2.6.3/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/lantz/.rvm/gems/ruby-2.6.3/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.8ms | Allocations: 195)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 734)
+
+
+Started GET "/species" for ::1 at 2020-11-20 10:15:01 -0800
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:4:in `index'
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."species_id" = ?[0m  [["species_id", 4]]
+  ↳ app/controllers/species_controller.rb:4:in `index'
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."species_id" = ?[0m  [["species_id", 5]]
+  ↳ app/controllers/species_controller.rb:4:in `index'
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."species_id" = ?[0m  [["species_id", 6]]
+  ↳ app/controllers/species_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 4300)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnimal Destroy (0.4ms)[0m  [1m[31mDELETE FROM "animals" WHERE "animals"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnimal Destroy (0.2ms)[0m  [1m[31mDELETE FROM "animals" WHERE "animals"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnimal Destroy (0.3ms)[0m  [1m[31mDELETE FROM "animals" WHERE "animals"."id" = ?[0m  [["id", 7]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnimal Destroy (0.2ms)[0m  [1m[31mDELETE FROM "animals" WHERE "animals"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecies Destroy (0.2ms)[0m  [1m[31mDELETE FROM "species" WHERE "species"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecies Destroy (0.2ms)[0m  [1m[31mDELETE FROM "species" WHERE "species"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecies Destroy (0.2ms)[0m  [1m[31mDELETE FROM "species" WHERE "species"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecies Create (0.3ms)[0m  [1m[32mINSERT INTO "species" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Dog"], ["created_at", "2020-11-20 18:15:33.765113"], ["updated_at", "2020-11-20 18:15:33.765113"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecies Create (0.3ms)[0m  [1m[32mINSERT INTO "species" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Dolphin"], ["created_at", "2020-11-20 18:15:33.770290"], ["updated_at", "2020-11-20 18:15:33.770290"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecies Create (0.3ms)[0m  [1m[32mINSERT INTO "species" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ferret"], ["created_at", "2020-11-20 18:15:33.773420"], ["updated_at", "2020-11-20 18:15:33.773420"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnimal Create (0.3ms)[0m  [1m[32mINSERT INTO "animals" ("name", "gender", "species_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Panther-Winfield"], ["gender", 0], ["species_id", 7], ["created_at", "2020-11-20 18:15:33.778515"], ["updated_at", "2020-11-20 18:15:33.778515"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnimal Create (0.2ms)[0m  [1m[32mINSERT INTO "animals" ("name", "gender", "species_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Charlotte"], ["gender", 1], ["species_id", 7], ["created_at", "2020-11-20 18:15:33.781393"], ["updated_at", "2020-11-20 18:15:33.781393"]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnimal Create (0.2ms)[0m  [1m[32mINSERT INTO "animals" ("name", "gender", "species_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Charlie"], ["gender", 2], ["species_id", 8], ["created_at", "2020-11-20 18:15:33.784083"], ["updated_at", "2020-11-20 18:15:33.784083"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnimal Create (0.2ms)[0m  [1m[32mINSERT INTO "animals" ("name", "gender", "species_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Eunice"], ["gender", 1], ["species_id", 9], ["created_at", "2020-11-20 18:15:33.786649"], ["updated_at", "2020-11-20 18:15:33.786649"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/species" for ::1 at 2020-11-20 10:15:43 -0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.3ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:4:in `index'
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."species_id" = ?[0m  [["species_id", 7]]
+  ↳ app/controllers/species_controller.rb:4:in `index'
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."species_id" = ?[0m  [["species_id", 8]]
+  ↳ app/controllers/species_controller.rb:4:in `index'
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."species_id" = ?[0m  [["species_id", 9]]
+  ↳ app/controllers/species_controller.rb:4:in `index'
+Completed 200 OK in 47ms (Views: 40.7ms | ActiveRecord: 2.0ms | Allocations: 15877)
+
+
+Started GET "/species" for ::1 at 2020-11-20 10:15:44 -0800
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  ↳ app/controllers/species_controller.rb:4:in `index'
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."species_id" = ?[0m  [["species_id", 7]]
+  ↳ app/controllers/species_controller.rb:4:in `index'
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."species_id" = ?[0m  [["species_id", 8]]
+  ↳ app/controllers/species_controller.rb:4:in `index'
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."species_id" = ?[0m  [["species_id", 9]]
+  ↳ app/controllers/species_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 4317)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 10:43:23 -0800
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.5ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.3ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 70ms (Views: 57.7ms | ActiveRecord: 2.2ms | Allocations: 16052)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 10:47:34 -0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.3ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 43ms (Views: 37.8ms | ActiveRecord: 1.4ms | Allocations: 16057)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 10:47:53 -0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 40ms (Views: 35.6ms | ActiveRecord: 1.2ms | Allocations: 16057)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 10:48:16 -0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 45ms (Views: 40.9ms | ActiveRecord: 1.6ms | Allocations: 16150)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 10:49:53 -0800
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.2ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.6ms | Allocations: 5222)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 10:50:36 -0800
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.2ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.7ms | Allocations: 5222)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 11:06:06 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.5ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.4ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 42ms (Views: 38.6ms | ActiveRecord: 1.1ms | Allocations: 13127)
+
+
+Started POST "/animals" for ::1 at 2020-11-20 11:06:14 -0800
+Processing by AnimalsController#create as JSON
+  Parameters: {"name"=>"Simon", "gender"=>"0", "species"=>"Feline", "animal"=>{"name"=>"Simon", "gender"=>"0"}}
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."name" = ? LIMIT ?[0m  [["name", "Feline"], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+  [1m[36mSpecies Create (0.7ms)[0m  [1m[32mINSERT INTO "species" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Feline"], ["created_at", "2020-11-20 19:06:14.852855"], ["updated_at", "2020-11-20 19:06:14.852855"]]
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.3ms | Allocations: 3584)
+
+
+  
+ArgumentError ('0' is not a valid gender):
+  
+app/controllers/animals_controller.rb:10:in `create'
+Started GET "/animals" for ::1 at 2020-11-20 11:07:25 -0800
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (1.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 1.6ms | Allocations: 5205)
+
+
+Started POST "/animals" for ::1 at 2020-11-20 11:07:31 -0800
+Processing by AnimalsController#create as JSON
+  Parameters: {"name"=>"Simon", "gender"=>"0", "species"=>"Feline", "animal"=>{"name"=>"Simon", "gender"=>"0"}}
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."name" = ? LIMIT ?[0m  [["name", "Feline"], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 822)
+
+
+  
+ArgumentError ('0' is not a valid gender):
+  
+app/controllers/animals_controller.rb:10:in `create'
+Started GET "/animals" for ::1 at 2020-11-20 11:08:06 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.5ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 21.9ms | ActiveRecord: 1.9ms | Allocations: 15745)
+
+
+Started POST "/animals" for ::1 at 2020-11-20 11:08:11 -0800
+Processing by AnimalsController#create as JSON
+  Parameters: {"name"=>"Simon", "gender"=>"0", "species"=>"Feline", "animal"=>{"name"=>"Simon", "gender"=>"0"}}
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."name" = ? LIMIT ?[0m  [["name", "Feline"], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/animals_controller.rb:11:in `create'
+  [1m[36mAnimal Create (0.3ms)[0m  [1m[32mINSERT INTO "animals" ("name", "gender", "species_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Simon"], ["gender", 0], ["species_id", 10], ["created_at", "2020-11-20 19:08:11.855551"], ["updated_at", "2020-11-20 19:08:11.855551"]]
+  ↳ app/controllers/animals_controller.rb:11:in `create'
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/animals_controller.rb:11:in `create'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 3137)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 11:10:12 -0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.2ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 25ms (Views: 20.8ms | ActiveRecord: 1.7ms | Allocations: 14857)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 11:10:13 -0800
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.2ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 98ms (Views: 97.2ms | ActiveRecord: 0.8ms | Allocations: 6319)
+
+
+Started POST "/animals" for ::1 at 2020-11-20 11:10:18 -0800
+Processing by AnimalsController#create as JSON
+  Parameters: {"name"=>"Simon", "gender"=>"0", "species"=>"Feline", "animal"=>{"name"=>"Simon", "gender"=>"0"}}
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."name" = ? LIMIT ?[0m  [["name", "Feline"], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/animals_controller.rb:11:in `create'
+  [1m[36mAnimal Create (0.3ms)[0m  [1m[32mINSERT INTO "animals" ("name", "gender", "species_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Simon"], ["gender", 0], ["species_id", 10], ["created_at", "2020-11-20 19:10:18.925915"], ["updated_at", "2020-11-20 19:10:18.925915"]]
+  ↳ app/controllers/animals_controller.rb:11:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/animals_controller.rb:11:in `create'
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 1.7ms | Allocations: 3248)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" ORDER BY "animals"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAnimals (20201120175452)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "animals"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20201120175452"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSpecies (20201120175339)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "species"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20201120175339"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSpecies (20201120175339)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "species" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201120175339"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAnimals (20201120175452)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "animals" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "gender" integer, "species_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_8c21b45993"
+FOREIGN KEY ("species_id")
+  REFERENCES "species" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_animals_on_species_id" ON "animals" ("species_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201120175452"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecies Create (0.8ms)[0m  [1m[32mINSERT INTO "species" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Dog"], ["created_at", "2020-11-20 22:50:55.092354"], ["updated_at", "2020-11-20 22:50:55.092354"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecies Create (0.2ms)[0m  [1m[32mINSERT INTO "species" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Dolphin"], ["created_at", "2020-11-20 22:50:55.096238"], ["updated_at", "2020-11-20 22:50:55.096238"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSpecies Create (0.2ms)[0m  [1m[32mINSERT INTO "species" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ferret"], ["created_at", "2020-11-20 22:50:55.098948"], ["updated_at", "2020-11-20 22:50:55.098948"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnimal Create (0.3ms)[0m  [1m[32mINSERT INTO "animals" ("name", "gender", "species_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Panther-Winfield"], ["gender", 0], ["species_id", 1], ["created_at", "2020-11-20 22:50:55.108491"], ["updated_at", "2020-11-20 22:50:55.108491"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnimal Create (0.3ms)[0m  [1m[32mINSERT INTO "animals" ("name", "gender", "species_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Charlotte"], ["gender", 1], ["species_id", 1], ["created_at", "2020-11-20 22:50:55.111580"], ["updated_at", "2020-11-20 22:50:55.111580"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnimal Create (0.2ms)[0m  [1m[32mINSERT INTO "animals" ("name", "gender", "species_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Charlie"], ["gender", 2], ["species_id", 2], ["created_at", "2020-11-20 22:50:55.114522"], ["updated_at", "2020-11-20 22:50:55.114522"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnimal Create (0.3ms)[0m  [1m[32mINSERT INTO "animals" ("name", "gender", "species_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Eunice"], ["gender", 1], ["species_id", 3], ["created_at", "2020-11-20 22:50:55.117433"], ["updated_at", "2020-11-20 22:50:55.117433"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" ORDER BY "animals"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/animals" for ::1 at 2020-11-20 14:52:21 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 1.1ms | Allocations: 16068)
+
+
+Started POST "/animals" for ::1 at 2020-11-20 14:54:34 -0800
+Processing by AnimalsController#create as JSON
+  Parameters: {"name"=>"Miyuki", "gender"=>"2", "species"=>"Feline", "animal"=>{"name"=>"Miyuki", "gender"=>"2"}}
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."name" = ? LIMIT ?[0m  [["name", "Feline"], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+  [1m[36mSpecies Create (0.4ms)[0m  [1m[32mINSERT INTO "species" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Feline"], ["created_at", "2020-11-20 22:54:34.087399"], ["updated_at", "2020-11-20 22:54:34.087399"]]
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/animals_controller.rb:11:in `create'
+  [1m[36mAnimal Create (0.3ms)[0m  [1m[32mINSERT INTO "animals" ("name", "gender", "species_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Miyuki"], ["gender", 2], ["species_id", 4], ["created_at", "2020-11-20 22:54:34.091089"], ["updated_at", "2020-11-20 22:54:34.091089"]]
+  ↳ app/controllers/animals_controller.rb:11:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/animals_controller.rb:11:in `create'
+Completed 200 OK in 41ms (Views: 0.4ms | ActiveRecord: 2.2ms | Allocations: 5978)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 15:01:09 -0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 53ms (Views: 51.7ms | ActiveRecord: 0.6ms | Allocations: 6383)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 15:04:01 -0800
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.2ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.8ms | Allocations: 6353)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 15:04:32 -0800
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.6ms | Allocations: 6353)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 15:06:07 -0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 29ms (Views: 24.2ms | ActiveRecord: 1.6ms | Allocations: 14942)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 15:27:40 -0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.5ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.4ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 1.3ms | Allocations: 6407)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 15:28:12 -0800
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.6ms | Allocations: 6374)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 15:29:12 -0800
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.6ms | Allocations: 6374)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 15:30:37 -0800
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.5ms | Allocations: 6374)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 15:31:09 -0800
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.3ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.9ms | Allocations: 6375)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 15:31:51 -0800
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 42ms (Views: 41.2ms | ActiveRecord: 0.6ms | Allocations: 6374)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 15:32:30 -0800
+Processing by AnimalsController#index as HTML
+  [1m[36mAnimal Load (0.2ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.6ms | Allocations: 6375)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 15:34:22 -0800
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.6ms | Allocations: 6374)
+
+
+Started PATCH "/animals/4" for ::1 at 2020-11-20 15:34:29 -0800
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for AnimalsController):
+  
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PATCH "/animals/4" for ::1 at 2020-11-20 15:36:57 -0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AnimalsController#update as JSON
+  Parameters: {"name"=>"Eugene", "id"=>"4", "animal"=>{"name"=>"Eugene"}}
+  [1m[36mAnimal Load (0.4ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:19:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/animals_controller.rb:20:in `update'
+  [1m[36mSpecies Load (0.4ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:20:in `update'
+  [1m[36mAnimal Update (0.4ms)[0m  [1m[33mUPDATE "animals" SET "name" = ?, "updated_at" = ? WHERE "animals"."id" = ?[0m  [["name", "Eugene"], ["updated_at", "2020-11-20 23:36:57.286256"], ["id", 4]]
+  ↳ app/controllers/animals_controller.rb:20:in `update'
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/animals_controller.rb:20:in `update'
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 2.4ms | Allocations: 11627)
+
+
+  
+ArgumentError (Unrecognized status code :update_successful):
+  
+app/controllers/animals_controller.rb:21:in `update'
+Started GET "/animals" for ::1 at 2020-11-20 15:38:13 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 22.2ms | ActiveRecord: 1.6ms | Allocations: 14944)
+
+
+Started PATCH "/animals/4" for ::1 at 2020-11-20 15:38:23 -0800
+Processing by AnimalsController#update as JSON
+  Parameters: {"name"=>"Eulaly", "id"=>"4", "animal"=>{"name"=>"Eulaly"}}
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:19:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/animals_controller.rb:20:in `update'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:20:in `update'
+  [1m[36mAnimal Update (0.3ms)[0m  [1m[33mUPDATE "animals" SET "name" = ?, "updated_at" = ? WHERE "animals"."id" = ?[0m  [["name", "Eulaly"], ["updated_at", "2020-11-20 23:38:23.594152"], ["id", 4]]
+  ↳ app/controllers/animals_controller.rb:20:in `update'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/animals_controller.rb:20:in `update'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.2ms | Allocations: 4365)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/animals_controller.rb:21:in `update'
+Started GET "/animals" for ::1 at 2020-11-20 15:40:37 -0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.3ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 38ms (Views: 34.8ms | ActiveRecord: 1.4ms | Allocations: 14912)
+
+
+Started PATCH "/animals/4" for ::1 at 2020-11-20 15:40:46 -0800
+Processing by AnimalsController#update as JSON
+  Parameters: {"name"=>"Eunice\n", "id"=>"4", "animal"=>{"name"=>"Eunice\n"}}
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:19:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/animals_controller.rb:20:in `update'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:20:in `update'
+  [1m[36mAnimal Update (0.2ms)[0m  [1m[33mUPDATE "animals" SET "name" = ?, "updated_at" = ? WHERE "animals"."id" = ?[0m  [["name", "Eunice\n"], ["updated_at", "2020-11-20 23:40:46.488412"], ["id", 4]]
+  ↳ app/controllers/animals_controller.rb:20:in `update'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/animals_controller.rb:20:in `update'
+Completed 204 No Content in 5ms (ActiveRecord: 1.1ms | Allocations: 4282)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 15:42:03 -0800
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.2ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.7ms | Allocations: 6374)
+
+
+Started PATCH "/animals/1" for ::1 at 2020-11-20 15:42:12 -0800
+Processing by AnimalsController#update as JSON
+  Parameters: {"name"=>"Winfield", "id"=>"1", "animal"=>{"name"=>"Winfield"}}
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:19:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/animals_controller.rb:20:in `update'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:20:in `update'
+  [1m[36mAnimal Update (0.4ms)[0m  [1m[33mUPDATE "animals" SET "name" = ?, "updated_at" = ? WHERE "animals"."id" = ?[0m  [["name", "Winfield"], ["updated_at", "2020-11-20 23:42:12.081845"], ["id", 1]]
+  ↳ app/controllers/animals_controller.rb:20:in `update'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/animals_controller.rb:20:in `update'
+Completed 204 No Content in 5ms (ActiveRecord: 1.3ms | Allocations: 4126)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 15:42:18 -0800
+Processing by AnimalsController#index as HTML
+  [1m[36mAnimal Load (0.3ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 35ms (Views: 34.7ms | ActiveRecord: 0.6ms | Allocations: 6373)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 15:43:26 -0800
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 61ms (Views: 59.8ms | ActiveRecord: 0.6ms | Allocations: 6374)
+
+
+Started PATCH "/animals/1" for ::1 at 2020-11-20 15:43:32 -0800
+Processing by AnimalsController#update as JSON
+  Parameters: {"name"=>"Panther-Winfield", "id"=>"1", "animal"=>{"name"=>"Panther-Winfield"}}
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:19:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/animals_controller.rb:20:in `update'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:20:in `update'
+  [1m[36mAnimal Update (0.3ms)[0m  [1m[33mUPDATE "animals" SET "name" = ?, "updated_at" = ? WHERE "animals"."id" = ?[0m  [["name", "Panther-Winfield"], ["updated_at", "2020-11-20 23:43:32.998241"], ["id", 1]]
+  ↳ app/controllers/animals_controller.rb:20:in `update'
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/animals_controller.rb:20:in `update'
+Completed 204 No Content in 5ms (ActiveRecord: 1.0ms | Allocations: 4126)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 15:43:41 -0800
+Processing by AnimalsController#index as HTML
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.4ms | Allocations: 6372)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 15:53:56 -0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.4ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.3ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 24.3ms | ActiveRecord: 1.0ms | Allocations: 14399)
+
+
+Started POST "/animals" for ::1 at 2020-11-20 15:54:03 -0800
+Processing by AnimalsController#create as JSON
+  Parameters: {"name"=>"", "gender"=>"2", "species"=>"Robot", "animal"=>{"name"=>"", "gender"=>"2"}}
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."name" = ? LIMIT ?[0m  [["name", "Robot"], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+  [1m[36mSpecies Create (0.6ms)[0m  [1m[32mINSERT INTO "species" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Robot"], ["created_at", "2020-11-20 23:54:03.181168"], ["updated_at", "2020-11-20 23:54:03.181168"]]
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 6788)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 15:54:58 -0800
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.4ms | Allocations: 6376)
+
+
+Started POST "/animals" for ::1 at 2020-11-20 15:55:05 -0800
+Processing by AnimalsController#create as JSON
+  Parameters: {"name"=>"", "gender"=>"2", "species"=>"Robot", "animal"=>{"name"=>"", "gender"=>"2"}}
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."name" = ? LIMIT ?[0m  [["name", "Robot"], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 1254)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 15:56:32 -0800
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.2ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 44ms (Views: 43.5ms | ActiveRecord: 0.6ms | Allocations: 6376)
+
+
+Started POST "/animals" for ::1 at 2020-11-20 15:56:43 -0800
+Processing by AnimalsController#create as JSON
+  Parameters: {"name"=>"", "gender"=>"2", "species"=>"Feline", "animal"=>{"name"=>"", "gender"=>"2"}}
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."name" = ? LIMIT ?[0m  [["name", "Feline"], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 1254)
+
+
+Started POST "/animals" for ::1 at 2020-11-20 15:57:06 -0800
+Processing by AnimalsController#create as JSON
+  Parameters: {"name"=>"Optimus Prime", "gender"=>"2", "species"=>"Robot", "animal"=>{"name"=>"Optimus Prime", "gender"=>"2"}}
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."name" = ? LIMIT ?[0m  [["name", "Robot"], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/animals_controller.rb:11:in `create'
+  [1m[36mAnimal Create (1.1ms)[0m  [1m[32mINSERT INTO "animals" ("name", "gender", "species_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Optimus Prime"], ["gender", 2], ["species_id", 5], ["created_at", "2020-11-20 23:57:06.720746"], ["updated_at", "2020-11-20 23:57:06.720746"]]
+  ↳ app/controllers/animals_controller.rb:11:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/animals_controller.rb:11:in `create'
+Completed 200 OK in 12ms (Views: 6.5ms | ActiveRecord: 1.8ms | Allocations: 3223)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 15:57:46 -0800
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 52ms (Views: 50.8ms | ActiveRecord: 0.8ms | Allocations: 7502)
+
+
+Started POST "/animals" for ::1 at 2020-11-20 15:57:59 -0800
+Processing by AnimalsController#create as JSON
+  Parameters: {"name"=>"", "gender"=>"2", "species"=>"Raptor", "animal"=>{"name"=>"", "gender"=>"2"}}
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."name" = ? LIMIT ?[0m  [["name", "Raptor"], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+  [1m[36mSpecies Create (0.4ms)[0m  [1m[32mINSERT INTO "species" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Raptor"], ["created_at", "2020-11-20 23:57:59.905838"], ["updated_at", "2020-11-20 23:57:59.905838"]]
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 3662)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 16:12:34 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.4ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.5ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 90ms (Views: 88.5ms | ActiveRecord: 1.5ms | Allocations: 7534)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 16:16:14 -0800
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.2ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 75ms (Views: 73.6ms | ActiveRecord: 0.8ms | Allocations: 7501)
+
+
+Started POST "/animals" for ::1 at 2020-11-20 16:16:21 -0800
+Processing by AnimalsController#create as JSON
+  Parameters: {"name"=>"", "gender"=>"2", "species"=>"Robot", "animal"=>{"name"=>"", "gender"=>"2"}}
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."name" = ? LIMIT ?[0m  [["name", "Robot"], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 1267)
+
+
+Started POST "/animals" for ::1 at 2020-11-20 16:16:51 -0800
+Processing by AnimalsController#create as JSON
+  Parameters: {"name"=>"", "gender"=>"2", "species"=>"Raptor", "animal"=>{"name"=>"", "gender"=>"2"}}
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."name" = ? LIMIT ?[0m  [["name", "Raptor"], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 1256)
+
+
+Started POST "/animals" for ::1 at 2020-11-20 16:17:19 -0800
+Processing by AnimalsController#create as JSON
+  Parameters: {"name"=>"Winona", "gender"=>"2", "species"=>"Arachnid", "animal"=>{"name"=>"Winona", "gender"=>"2"}}
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."name" = ? LIMIT ?[0m  [["name", "Arachnid"], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+  [1m[36mSpecies Create (0.8ms)[0m  [1m[32mINSERT INTO "species" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Arachnid"], ["created_at", "2020-11-21 00:17:19.203718"], ["updated_at", "2020-11-21 00:17:19.203718"]]
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/animals_controller.rb:11:in `create'
+  [1m[36mAnimal Create (0.7ms)[0m  [1m[32mINSERT INTO "animals" ("name", "gender", "species_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Winona"], ["gender", 2], ["species_id", 7], ["created_at", "2020-11-21 00:17:19.208114"], ["updated_at", "2020-11-21 00:17:19.208114"]]
+  ↳ app/controllers/animals_controller.rb:11:in `create'
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/animals_controller.rb:11:in `create'
+Completed 200 OK in 66ms (Views: 0.5ms | ActiveRecord: 8.8ms | Allocations: 5576)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 16:22:55 -0800
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (0.2ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:4:in `index'
+Completed 200 OK in 69ms (Views: 62.3ms | ActiveRecord: 1.4ms | Allocations: 19540)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 16:33:27 -0800
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/animals"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/animals" for ::1 at 2020-11-20 16:39:04 -0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/animals"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/animals" for ::1 at 2020-11-20 16:39:59 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/animals"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/animals" for ::1 at 2020-11-20 16:40:29 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/animals"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/animals" for ::1 at 2020-11-20 16:41:21 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/animals"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/animals" for ::1 at 2020-11-20 16:41:55 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/animals"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/animals" for ::1 at 2020-11-20 16:42:39 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/animals"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/animals" for ::1 at 2020-11-20 16:42:54 -0800
+Processing by Api::V1::AnimalsController#index as HTML
+  [1m[36mAnimal Load (0.6ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/api/v1/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.4ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/animals_controller.rb:4:in `index'
+Completed 200 OK in 47ms (Views: 40.3ms | ActiveRecord: 2.3ms | Allocations: 19634)
+
+
+Started GET "/animals" for ::1 at 2020-11-20 16:46:03 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/animals"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/animals" for ::1 at 2020-11-20 16:47:14 -0800
+Processing by Api::V1::AnimalsController#index as */*
+  [1m[36mAnimal Load (0.3ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/api/v1/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/animals_controller.rb:4:in `index'
+Completed 200 OK in 64ms (Views: 57.0ms | ActiveRecord: 1.9ms | Allocations: 19567)
+
+
