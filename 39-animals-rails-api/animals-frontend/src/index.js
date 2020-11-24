@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const handleSubmission = (e) => {
         e.preventDefault()
+        console.dir(e)
         errorContainer.classList.add('hidden')
         const body = {}
         const inputs = form.querySelectorAll("input")

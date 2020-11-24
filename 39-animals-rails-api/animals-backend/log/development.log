@@ -1710,3 +1710,46 @@ Processing by Api::V1::AnimalsController#index as */*
 Completed 200 OK in 64ms (Views: 57.0ms | ActiveRecord: 1.9ms | Allocations: 19567)
 
 
+Started GET "/api/v1/animals" for ::1 at 2020-11-24 13:36:51 -0800
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AnimalsController#index as */*
+  [1m[36mAnimal Load (0.3ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/api/v1/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/animals_controller.rb:4:in `index'
+  [1m[36mCACHE Species Load (0.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/animals_controller.rb:4:in `index'
+  [1m[36mSpecies Load (0.1ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/animals_controller.rb:4:in `index'
+Completed 200 OK in 47ms (Views: 40.7ms | ActiveRecord: 1.6ms | Allocations: 19726)
+
+
+Started POST "/api/v1/animals" for ::1 at 2020-11-24 13:37:26 -0800
+Processing by Api::V1::AnimalsController#create as JSON
+  Parameters: {"name"=>"Rickenbocker", "gender"=>"0", "species"=>"Griffin", "animal"=>{"name"=>"Rickenbocker", "gender"=>"0"}}
+  [1m[36mSpecies Load (0.3ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."name" = ? LIMIT ?[0m  [["name", "Griffin"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/animals_controller.rb:9:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/animals_controller.rb:9:in `create'
+  [1m[36mSpecies Create (0.6ms)[0m  [1m[32mINSERT INTO "species" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Griffin"], ["created_at", "2020-11-24 21:37:26.671050"], ["updated_at", "2020-11-24 21:37:26.671050"]]
+  ↳ app/controllers/api/v1/animals_controller.rb:9:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/animals_controller.rb:9:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/animals_controller.rb:11:in `create'
+  [1m[36mAnimal Create (0.7ms)[0m  [1m[32mINSERT INTO "animals" ("name", "gender", "species_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Rickenbocker"], ["gender", 0], ["species_id", 8], ["created_at", "2020-11-24 21:37:26.675341"], ["updated_at", "2020-11-24 21:37:26.675341"]]
+  ↳ app/controllers/api/v1/animals_controller.rb:11:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/animals_controller.rb:11:in `create'
+Completed 200 OK in 13ms (Views: 1.0ms | ActiveRecord: 3.0ms | Allocations: 5996)
+
+
