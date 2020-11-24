@@ -92,7 +92,10 @@
       },
       body: JSON.stringify({likes: newLikes})
     })
-    .then(res=>res.json())
+    .then(res=>{
+      console.log(res)
+      return res.json()
+    })
     .then(json=> likesDiv.innerText = `${json.likes} likes`)
     .catch(errors=>{
       console.log(errors)

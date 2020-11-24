@@ -1,0 +1,71 @@
+{
+  "quotes": [
+    {
+      "id": 1,
+      "quote": "Expect nothing. Live frugally on surprise.",
+      "author": "Alice Walker"
+    },
+    {
+      "id": 2,
+      "quote": "Y’all is the best, most inclusive, second-person, plural pronoun in the English-speaking world.",
+      "author": "Hannah Gadsby"
+    },
+    {
+      "id": 3,
+      "quote": "today a man on the street pointed to me & said ‘what the hell is that!?’ i wanted to turn around, tell him that i got this dress on sale & i got this body for free but you have been making me pay for both ever since.",
+      "author": "Alok Vaid Menon"
+    },
+    {
+      "id": 4,
+      "quote": "You gain strength, courage and confidence by every experience in which you really stop to look fear in the face. You are able to say to yourself, 'I have lived through this horror. I can take the next thing that comes along.' You must do the thing you think you cannot do.",
+      "author": "Eleanor Roosevelt"
+    },
+    {
+      "id": 5,
+      "quote": "We had better not enjoy the moment, but create the moment.",
+      "author": "Ai Weiwei"
+    },
+    {
+      "id": 6,
+      "quote": "If I didn't define myself for myself, I would be crunched into other people's fantasies for me and eaten alive.",
+      "author": "Audre Lorde"
+    },
+    {
+      "id": 7,
+      "quote": "Our greatest glory is not in never falling, but in rising everytime we fall.",
+      "author": "Confucius"
+    },
+    {
+      "id": 8,
+      "quote": "Don't count the days, make the days count.",
+      "author": "Muhammad Ali"
+    },
+    {
+      "id": 9,
+      "quote": "Not everything that is faced can be changed, but nothing can be changed until it is faced.",
+      "author": "James Baldwin"
+    },
+    {
+      "id": 11,
+      "quote": "The here and now is all we have, and if we play it right it's all we'll need.",
+      "author": "Ann Richards"
+    },
+    {
+      "quote": "\"Spanex are in\"",
+      "author": "Carrie Fisher RIP",
+      "id": 12
+    },
+    {
+      "quote": "\"Why can't dogs vote\"",
+      "author": "Norah Jones",
+      "id": 13
+    }
+  ],
+  "likes": [
+    {
+      "id": 1,
+      "quoteId": 1,
+      "createdAt": 1558524356
+    }
+  ]
+}
