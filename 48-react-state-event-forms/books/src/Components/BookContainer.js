@@ -1,17 +1,58 @@
-import React from 'react'
+import React, {Component} from 'react'
+import books from '../data/data'
 import BookCard from './BookCard'
+import FormComponent from './FormComponent'
 
-const BookContainer = (props) => {
-    console.log(props)
-    return (
-        <div>
-            <h1> JavaScript Books </h1>
-            <BookCard title="Eloquent JavaScript" author="Marijn Haverbeke" img="https://images-na.ssl-images-amazon.com/images/I/51IKycqTPUL._SX376_BO1,204,203,200_.jpg" />
-            <BookCard title="Learning JavaScript Design Patterns" author="Addy Osmani" img="https://images-na.ssl-images-amazon.com/images/I/917iQZBR91L.jpg" />
-            <BookCard title="Speaking JavaScript" author="Axel Rauschmayer" img="http://speakingjs.com/es5/orm_front_cover.jpg" />
-            
-        </div>
-    )
+class BookContainer extends Component {
+    
+    state = {
+        books: [...books],
+        totalRead: 0
+    }
+
+    renderBooks = () => {
+        return this.state.books.map(book => <BookCard 
+            key={book.isbn}
+            title={book.title}
+            author={book.author}
+            img={book.image}
+            addToTotal={this.addToTotal}
+            />)
+    }
+
+    // a callback function to pass to the BookCard component through props
+    // will register click events that happen on the child component and update state on this component
+    addToTotal = () => {
+        console.log("increase total")
+        this.setState((prevState)=>{
+            return {
+                totalRead: prevState.totalRead + 1
+            }
+        })
+    }
+    // a callback function to pass to the FormComponent
+    // this allows the state of FormComponent to be passed up to BookContainer
+    handleAddToBooks = (book) => {
+        console.log(book)
+        this.setState((oldState) => {
+            // oldState.books.push(book)
+            return {
+                // books: oldState.books
+                books: [...oldState.books, book]
+            }
+        })
+    }
+
+    render(){
+        return (
+            <div>
+                <h1> JavaScript Books </h1>
+                 <h4>Total Read: {this.state.totalRead}</h4>
+                 <FormComponent handleAddToBooks={this.handleAddToBooks}/>
+                {this.renderBooks()}
+            </div>
+        )
+    }
 
 
 }
