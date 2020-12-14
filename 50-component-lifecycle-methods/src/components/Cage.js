@@ -9,8 +9,16 @@ class Cage extends Component {
   }
 
   // TODO: MAKE THE CAGE MOVE EVERY SECOND
-  
+  componentDidMount() {
+    this.timer = setInterval(() => {
+      this.move()
+    }, 1000)
 
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer)
+  }
   
   // CALL THIS EVERY SECOND TO MOVE THE CAGE
   move = () => {

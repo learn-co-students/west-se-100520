@@ -13,12 +13,18 @@ class App extends React.Component {
       filters: {
         type: 'all'
       }, 
-      filteredPets: [], /* ADD STATE FOR CHOSEN PETS */
+      filteredPets: [], /* ADD STATE FOR CHOSEN PETS, use-case: if you want to modify some attribute of filtered pets only but want to be able to return the original pets state without fetching*/
       isCaged: false /* FOR CAGED COMPONENT */
     }
   }
 
   // TODO: SET STATE WITH ONE FETCH
+  componentDidMount() {
+    const endpoint = '/api/pets';
+    fetch(endpoint)
+    .then(res => res.json())
+    .then(pets => this.setState({ pets: pets, filteredPets: pets }));
+  }
   
 
   onChangeType = (e) => {
@@ -27,13 +33,20 @@ class App extends React.Component {
 
   // TODO: MODIFY TO CHOOSE THE PET TYPE FROM PETS AND UPDATE FILTERED PETS
   onFindPetsClick = () => {
-    const domain = '/api/pets';
+    // const domain = '/api/pets';
     const filterType = this.state.filters.type;
-    const endpoint = filterType === 'all' ? domain : `${domain}?type=${filterType}`;
+    // const endpoint = filterType === 'all' ? domain : `${domain}?type=${filterType}`;
+    let filteredPets
+    if (filterType === 'all') {
+      filteredPets = [...this.state.pets]
+    } else {
+      filteredPets = this.state.pets.filter(pet => pet.type === filterType)
+    }
 
-    fetch(endpoint)
-    .then(res => res.json())
-    .then(pets => this.setState({ pets }));
+    this.setState({ filteredPets })
+    // fetch(endpoint)
+    // .then(res => res.json())
+    // .then(pets => this.setState({ pets }));
     
   };
 
@@ -65,7 +78,7 @@ class App extends React.Component {
               </button>
             </div>
             <div className="twelve wide column">
-              <PetBrowser pets={this.state.pets} onAdoptPet={this.onAdoptPet}  />
+              <PetBrowser pets={this.state.filteredPets} onAdoptPet={this.onAdoptPet}  />
             </div>
           </div>
         </div>
