@@ -105,6 +105,9 @@ ul {
 .pigTile h3 {
   color: #FBB;
 }
+.pigTile img {
+  width: 100%;
+}
 .minPigTile {
   width: 250px;
   height: 250px;
