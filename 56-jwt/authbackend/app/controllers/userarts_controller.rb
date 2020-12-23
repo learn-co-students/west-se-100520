@@ -2,7 +2,7 @@ class UserartsController < ApplicationController
 
  
   def create
-   
+   byebug
   end
 
 

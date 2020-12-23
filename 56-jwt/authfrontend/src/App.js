@@ -32,21 +32,45 @@ class App extends React.Component{
 //auth
   handleLogin = (info) => {
     console.log('login')
-
+    this.handleAuthFetch(info, 'http://localhost:3000/login')
   }
 
   handleSignup = (info) => {
     console.log('sign up')
+    this.handleAuthFetch(info, 'http://localhost:3000/users')
     
   }
   
   handleAuthFetch = (info, request) => {  
-    
+    fetch(request, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        username: info.username,
+        password: info.password
+      })
+    })
+    .then(res => res.json())
+    .then(data => {
+      this.setState({user: data.user, token: data.token}, () => {
+        this.props.history.push('/')
+      })
+    })
   }
   
   addToCollection = (art) => {
-
-
+    fetch('http://localhost:3000/userarts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization' : `Bearer ${this.state.token}`
+      },
+      body: JSON.stringify({art_id: art.id})
+    })
+    .then(res => res.json())
+    .then(console.log)
   }
 
   
@@ -56,13 +80,13 @@ class App extends React.Component{
         <Navbar icon="paint brush" title="Painterest" description="out app" />
      
         <Switch>
-        <Route path="/" exact component={this.handleHome} />
-        <Route path="/login" exact component={this.renderForm} />
-        <Route path="/signup" exact component={this.renderForm} />
-        <Route path="/paintings" exact component={this.handleAllPaintings}/>
-        <Route path="/paintings/:id" render={this.dynamicPaintings} />
-        <Route path="/favorites" exact component={this.handleUserPaintings} />
-        <Route component={NotFound}/>
+          <Route path="/" exact component={this.handleHome} />
+          <Route path="/login" exact component={this.renderForm} />
+          <Route path="/signup" exact component={this.renderForm} />
+          <Route path="/paintings" exact component={this.handleAllPaintings}/>
+          <Route path="/paintings/:id" render={this.dynamicPaintings} />
+          <Route path="/favorites" exact component={this.handleUserPaintings} />
+          <Route component={NotFound}/>
         </Switch>
       </div>
     )
