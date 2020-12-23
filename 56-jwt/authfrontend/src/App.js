@@ -70,7 +70,7 @@ class App extends React.Component{
       body: JSON.stringify({art_id: art.id})
     })
     .then(res => res.json())
-    .then(console.log)
+    .then(data => this.setState({user:data.user}))
   }
 
   
