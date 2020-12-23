@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 
 class PaintingDetail extends React.Component {
   render() {
@@ -25,6 +26,8 @@ class PaintingDetail extends React.Component {
         >
           Vote! {this.props.painting.votes}
         </button>
+        <Link to="/paintings" className="ui button">Back</Link>
+
       </div>
     );
   }

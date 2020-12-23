@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import PaintingsContainer from "./components/PaintingsContainer";
 import NewPainting from './components/NewPainting';
 import About from './components/About'
+import { Route, Switch } from 'react-router-dom'
 
 const mockProps = {
   color: "teal",
@@ -22,9 +23,11 @@ class App extends Component {
           icon="paint brush"
           description="All ur paintings"
         />
-        <About />
-        <NewPainting />
-        <PaintingsContainer />
+       <Switch>
+          <Route path="/paintings/new" component={NewPainting} />
+          <Route exact path="/" component={About} />
+          <Route path='/paintings' component={PaintingsContainer} />
+        </Switch>
       </div>
     );
   }

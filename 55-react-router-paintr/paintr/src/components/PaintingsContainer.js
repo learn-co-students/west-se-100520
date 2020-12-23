@@ -3,6 +3,7 @@ import PaintingsList from "./PaintingsList";
 import PaintingDetail from "./PaintingDetail";
 import PaintingForm from "./PaintingForm";
 import paintingsData from "../paintings.json";
+import { Route, Switch } from 'react-router-dom'
 
 class PaintingsContainer extends React.Component {
   constructor() {
@@ -73,6 +74,28 @@ class PaintingsContainer extends React.Component {
   };
 
   render() {
+    let onePainting = {
+      "id": "59bd5a519c18db5297a32479",
+      "collecting_institution": "",
+      "date": "1446",
+      "dimensions": {
+        "text": "11 1/2 Ã— 8 1/2 in",
+        "height": 11.5,
+        "width": 8.5,
+        "depth": null,
+        "diameter": null
+      },
+      "slug": "petrus-christus-portrait-of-a-carthusian",
+      "title": "Portrait of a Carthusian",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/pVc7CubFzVlPhbErTAqyYg/medium.jpg",
+      "artist": {
+        "name": "Petrus Christus",
+        "hometown": "Baarle-Hertog, Belgium",
+        "birthday": "1410",
+        "deathday": "1475"
+      },
+      "votes": 64
+    }
     let selectedPainting = this.state.paintings.find(
       painting => painting.id === this.state.selectedPaintingId
     );
@@ -91,11 +114,20 @@ class PaintingsContainer extends React.Component {
     );
     return (
       <div>
-        {this.state.selectedPaintingId ? paintingToShow : null}
-        <PaintingsList
-          selectPainting={this.selectPainting}
-          paintings={this.state.paintings}
-        />
+        <Switch>
+          <Route 
+            path='/paintings/:slug'
+            render={({match}) => {
+              console.log(match)
+              const chosenPainting = this.state.paintings.find(painting => painting.slug === match.params.slug)
+              
+              return chosenPainting ? <PaintingDetail painting={chosenPainting} />: <div>Loading...</div>
+            }
+            }  />
+          <Route path='/paintings' render={() => {
+            return <PaintingsList paintings={this.state.paintings}/>
+          }} />
+        </Switch> 
       </div>
     );
   }

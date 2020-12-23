@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 
 const PaintingListItem = props => (
-  <div className="item" onClick={() => props.selectPainting(props.painting.id)}>
+  <Link to={`/paintings/${props.painting.slug}`} className="item" >
     <div className="content">
       <h2>{props.painting.title}</h2>
       <em>
         {props.painting.artist.name}·{props.painting.date}
       </em>
     </div>
-  </div>
+  </Link>
 );
 
 export default PaintingListItem;
