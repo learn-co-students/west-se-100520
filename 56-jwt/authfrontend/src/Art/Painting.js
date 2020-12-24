@@ -12,7 +12,7 @@ const Painting = props => {
         <div className="header">{`"${props.painting.title}" by ${props.painting
           .artist.name}`}</div>
         <div className="description">
-          <a onClick={() => props.handleVote(props.painting.id)}>
+          <a onClick={() => props.handleVote(props.painting.id)} href="#!">
             <i className="large caret up icon" />
             {props.painting.votes} votes
           </a>

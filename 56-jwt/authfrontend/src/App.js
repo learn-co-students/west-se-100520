@@ -3,7 +3,7 @@ import {Route, Switch, withRouter} from 'react-router-dom'
 
 import Navbar from './Navbar'
 import PaintingList from './Art/PaintingList'
-import ArtistList from './Art/ArtistList'
+// import ArtistList from './Art/ArtistList'
 import Home from './Home'
 import NotFound from './NotFound'
 import Form from './Auth/Form'
@@ -12,11 +12,11 @@ import UserFavorite from './Art/UserFavorite'
 
 
 class App extends React.Component{
+  // state is more secure than localStorage, but is reset on page reload
   state ={
-    user: "",
-    token:""
+    user: ""
   }
-//render components 
+  //render components 
   dynamicPaintings = (routerProps) =>   <PaintingList paintingId={routerProps.match.params.id} />
   handleHome = () => <Home username={this.state.user.username} />
   handleAllPaintings = () =>  <PaintingList addToCollection={this.addToCollection} />
@@ -29,16 +29,23 @@ class App extends React.Component{
       return <Form name="Signup Form" handleSubmit={this.handleSignup} />
     }
   }
-//auth
+  //auth
   handleLogin = (info) => {
     console.log('login')
     this.handleAuthFetch(info, 'http://localhost:3000/login')
   }
 
+  // logout needs to delete the token from localStorage AND remove user data from state
+  handleLogout = () => {
+    localStorage.clear()
+    this.setState({user: ""}, () => {
+      this.props.history.push('/login')
+    })
+  }
+
   handleSignup = (info) => {
     console.log('sign up')
     this.handleAuthFetch(info, 'http://localhost:3000/users')
-    
   }
   
   handleAuthFetch = (info, request) => {  
@@ -54,7 +61,9 @@ class App extends React.Component{
     })
     .then(res => res.json())
     .then(data => {
-      this.setState({user: data.user, token: data.token}, () => {
+      // stores the user in state, but stores the token in localStorage
+      this.setState({user: data.user}, () => {
+        localStorage.setItem('jwt', data.token)
         this.props.history.push('/')
       })
     })
@@ -65,7 +74,7 @@ class App extends React.Component{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization' : `Bearer ${this.state.token}`
+        'Authorization' : `Bearer ${localStorage.getItem('jwt')}`
       },
       body: JSON.stringify({art_id: art.id})
     })
@@ -73,11 +82,25 @@ class App extends React.Component{
     .then(data => this.setState({user:data.user}))
   }
 
-  
+  // this is to handle a case where the user reloads the page but didn't mean to logout.  Re-fetches the user just using the token.
+  componentDidMount() {
+    if (localStorage.getItem('jwt')) {
+      fetch('http://localhost:3000/getuser', {
+        method: "GET",
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization' : `Bearer ${localStorage.getItem('jwt')}`
+        }
+      })
+      .then(res => res.json())
+      .then(data => this.setState({user: data.user}))
+    }
+  }
+
   render(){
     return (
       <div className="App">
-        <Navbar icon="paint brush" title="Painterest" description="out app" />
+        <Navbar icon="paint brush" title="Paintr" description="For art collectors" handleLogout={this.handleLogout}/>
      
         <Switch>
           <Route path="/" exact component={this.handleHome} />

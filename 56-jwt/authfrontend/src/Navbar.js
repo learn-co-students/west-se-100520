@@ -16,7 +16,7 @@ class Navbar extends React.Component {
   render() {
     return (
       <div className={`ui inverted ${this.state.color} menu`}>
-        <a className="item">
+        <a className="item" href="#!">
           <h2 className="ui header">
             <i className={`${this.props.icon} icon`} />
             <div className="content">{this.props.title}</div>
@@ -32,7 +32,13 @@ class Navbar extends React.Component {
               <Link to="/favorites">Favorites</Link>
             </li>
             <li className="ui button">
+              <Link to="/signup">Signup</Link>
+            </li>
+            <li className="ui button">
               <Link to="/login">Login</Link>
+            </li>
+            <li className="ui button">
+              <a onClick={() => this.props.handleLogout()} href="#!">Logout</a>
             </li>
             <li className="ui button">
               <Link to="/paintings">Paintings</Link>

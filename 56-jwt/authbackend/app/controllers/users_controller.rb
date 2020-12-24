@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+  skip_before_action :authorized, only: [:create, :login]
 
   def create
     # byebug
@@ -22,6 +22,10 @@ class UsersController < ApplicationController
       render json: {error: "Incorrect Username or Password"}
     end
   end 
+
+  def getuser
+    render json: {user: UserSerializer.new(current_user)}
+  end
 
   private
 

@@ -1,22 +1,29 @@
 import UserPainting from "./UserPainting";
 import React from 'react'
 class UserFavorite extends React.Component {
-
-    render() {
   
-      const allPaintings = this.props.paintings.map(painting => (
+  allPaintings = () => {
+    if (this.props.paintings){
+      return this.props.paintings.map(painting => (
         <UserPainting
           key={Math.random()}
           painting={painting}
         />
-      ));
-      return (
-        <div>
-          <h1>All Paintings</h1>
-          <div className="ui items">{allPaintings}</div>
-        </div>
-      );
-    }
+      )) 
+    } 
   }
-  export default UserFavorite;
+
+  render() {
+
+
+    return (
+      <div>
+        <h1>All Paintings</h1>
+        <div className="ui items">{this.allPaintings()}</div>
+      </div>
+    );
+  }
+}
+
+export default UserFavorite;
   
