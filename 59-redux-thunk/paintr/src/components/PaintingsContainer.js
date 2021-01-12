@@ -1,12 +1,20 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-
+import { connect } from 'react-redux'
 import PaintingsList from "./PaintingsList";
 import PaintingDetail from "./PaintingDetail";
 import PaintingForm from "./PaintingForm";
 import Searchbar from "./Searchbar";
 
 class PaintingsContainer extends React.Component {
+
+  handleLoading = () => {
+    if (this.props.loading) {
+      return <h2>Loading...</h2>
+    } else {
+      return <PaintingsList />
+    }
+  }
   render() {
     return (
       <div>
@@ -34,7 +42,7 @@ class PaintingsContainer extends React.Component {
             render={() => (
               <div className="ui narrow container segment">
                 <Searchbar />
-                <PaintingsList />
+                {this.handleLoading()}
               </div>
             )}
           />
@@ -44,4 +52,7 @@ class PaintingsContainer extends React.Component {
   }
 }
 
-export default PaintingsContainer;
+const mapStateToProps = (state) => {
+  return {loading: state.loading}
+}
+export default connect(mapStateToProps)(PaintingsContainer);

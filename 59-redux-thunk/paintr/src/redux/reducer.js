@@ -10,8 +10,10 @@ const searchTextReducer = (state = "", action) => {
   }
 };
 
-const paintingsReducer = (state = paintingsData.paintings, action) => {
+const paintingsReducer = (state = [], action) => {
   switch (action.type) {
+    case "FETCHED_PAINTINGS":
+      return action.paintings
     case "INCREASE_VOTES":
       return state.map(painting => {
         if (painting.id === action.paintingId) {
@@ -45,9 +47,21 @@ const paintingsReducer = (state = paintingsData.paintings, action) => {
   }
 };
 
+const loadingReducer = (state=false, action) => {
+  switch(action.type){
+    case 'LOADING_PAINTINGS':
+      return true
+    case 'LOADED_PAINTINGS':
+      return false
+    default:
+      return state
+  }
+}
+
 const rootReducer = combineReducers({
   searchText: searchTextReducer,
-  paintings: paintingsReducer
+  paintings: paintingsReducer,
+  loading: loadingReducer
 });
 
 export default rootReducer;

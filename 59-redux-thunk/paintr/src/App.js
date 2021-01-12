@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
-
+import { Route, Switch, withRouter } from "react-router-dom";
+import { fetchPaintings } from './redux/actions'
+import { connect } from 'react-redux'
 import "./App.css";
 import Navbar from "./components/Navbar";
 import PaintingsContainer from "./components/PaintingsContainer";
@@ -14,6 +15,10 @@ const mockProps = {
 };
 
 class App extends Component {
+
+  componentDidMount(){
+    this.props.fetchPaintings()
+  }
   render() {
     return (
       <div className="App">
@@ -32,4 +37,8 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapDispatchToProps = {
+  fetchPaintings
+}
+
+export default withRouter(connect(null, mapDispatchToProps)(App));

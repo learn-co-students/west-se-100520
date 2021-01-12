@@ -13,15 +13,14 @@
       },
       "slug": "petrus-christus-portrait-of-a-carthusian",
       "title": "Portrait of a Carthusian",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/pVc7CubFzVlPhbErTAqyYg/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/pVc7CubFzVlPhbErTAqyYg/medium.jpg",
       "artist": {
         "name": "Petrus Christus",
         "hometown": "Baarle-Hertog, Belgium",
         "birthday": "1410",
         "deathday": "1475"
       },
-      "votes": 64
+      "votes": 67
     },
     {
       "id": "59bd5a4c275b247913821d2a",
@@ -36,8 +35,7 @@
       },
       "slug": "johannes-vermeer-study-of-a-young-woman",
       "title": "Study of a Young Woman",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/pLcp7hFbgtfYnmq-b_LXvg/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/pLcp7hFbgtfYnmq-b_LXvg/medium.jpg",
       "artist": {
         "name": "Johannes Vermeer",
         "hometown": "Delft, Netherlands",
@@ -59,8 +57,7 @@
       },
       "slug": "rembrandt-van-rijn-portrait-of-gerard-de-lairesse",
       "title": "Portrait of Gerard de Lairesse",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/6b4QduWxeA1kSnrifgm2Zw/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/6b4QduWxeA1kSnrifgm2Zw/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -82,8 +79,7 @@
       },
       "slug": "peter-paul-rubens-bust-of-pseudo-seneca",
       "title": "Bust of Pseudo-Seneca",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/RcoWk2PHQq6yqX7dpSyt-g/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/RcoWk2PHQq6yqX7dpSyt-g/medium.jpg",
       "artist": {
         "name": "Peter Paul Rubens",
         "hometown": "Siegen, Westphalia",
@@ -105,8 +101,7 @@
       },
       "slug": "petrus-christus-a-goldsmith-in-his-shop",
       "title": "A Goldsmith in his Shop",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/0-QXL43Ox2QgwqkYoCjAjg/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/0-QXL43Ox2QgwqkYoCjAjg/medium.jpg",
       "artist": {
         "name": "Petrus Christus",
         "hometown": "Baarle-Hertog, Belgium",
@@ -126,12 +121,9 @@
         "depth": null,
         "diameter": null
       },
-      "slug":
-        "peter-paul-rubens-rubens-his-wife-helena-fourment-1614-1673-and-their-son-frans-1633-1678",
-      "title":
-        "Rubens, His Wife Helena Fourment (1614-1673), and Their Son Frans (1633-1678)",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/miBYVNx3iV4AtBWgierQrg/medium.jpg",
+      "slug": "peter-paul-rubens-rubens-his-wife-helena-fourment-1614-1673-and-their-son-frans-1633-1678",
+      "title": "Rubens, His Wife Helena Fourment (1614-1673), and Their Son Frans (1633-1678)",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/miBYVNx3iV4AtBWgierQrg/medium.jpg",
       "artist": {
         "name": "Peter Paul Rubens",
         "hometown": "Siegen, Westphalia",
@@ -153,8 +145,7 @@
       },
       "slug": "rembrandt-van-rijn-aristotle-with-a-bust-of-homer",
       "title": "Aristotle with a Bust of Homer",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/q5OTabe7_Bu8kfxzK_UUag/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/q5OTabe7_Bu8kfxzK_UUag/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -176,8 +167,7 @@
       },
       "slug": "johannes-vermeer-young-woman-with-a-water-pitcher",
       "title": "Young Woman with a Water Pitcher",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/pdRjIGw58ecojporcDG0_w/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/pdRjIGw58ecojporcDG0_w/medium.jpg",
       "artist": {
         "name": "Johannes Vermeer",
         "hometown": "Delft, Netherlands",
@@ -199,8 +189,7 @@
       },
       "slug": "rembrandt-van-rijn-self-portrait-1661",
       "title": "Self-Portrait",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/7EthRD-B57oEJovV77WH0Q/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/7EthRD-B57oEJovV77WH0Q/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -220,11 +209,9 @@
         "depth": null,
         "diameter": null
       },
-      "slug":
-        "peter-paul-rubens-portrait-of-nicolas-trigault-in-chinese-costume",
+      "slug": "peter-paul-rubens-portrait-of-nicolas-trigault-in-chinese-costume",
       "title": "Portrait of Nicolas Trigault in Chinese Costume",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/-VmrYlEp4nXEjtSa8-C7PA/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/-VmrYlEp4nXEjtSa8-C7PA/medium.jpg",
       "artist": {
         "name": "Peter Paul Rubens",
         "hometown": "Siegen, Westphalia",
@@ -246,8 +233,7 @@
       },
       "slug": "bartholomaeus-spranger-diana-and-actaeon",
       "title": "Diana and Actaeon",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/FaqwCA1k4QjgaiGN8PElUQ/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/FaqwCA1k4QjgaiGN8PElUQ/medium.jpg",
       "artist": {
         "name": "Bartholomaeus Spranger",
         "hometown": "Antwerp, Belgium",
@@ -269,8 +255,7 @@
       },
       "slug": "frans-hals-willem-coymans",
       "title": "Willem Coymans",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/gXMChrE5re4HdlIP6__LXQ/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/gXMChrE5re4HdlIP6__LXQ/medium.jpg",
       "artist": {
         "name": "Frans Hals",
         "hometown": "Antwerp, Belgium",
@@ -292,8 +277,7 @@
       },
       "slug": "johannes-vermeer-girl-with-the-red-hat",
       "title": "Girl with the Red Hat",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/HonaTUUvYdsWkN0lZDupoA/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/HonaTUUvYdsWkN0lZDupoA/medium.jpg",
       "artist": {
         "name": "Johannes Vermeer",
         "hometown": "Delft, Netherlands",
@@ -315,8 +299,7 @@
       },
       "slug": "anthony-van-dyck-portrait-of-a-flemish-lady",
       "title": "Portrait of a Flemish Lady",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/84kbp21trAp1_h2P8tpoZg/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/84kbp21trAp1_h2P8tpoZg/medium.jpg",
       "artist": {
         "name": "Anthony van Dyck",
         "hometown": "Antwerp, Belgium",
@@ -338,8 +321,7 @@
       },
       "slug": "johannes-vermeer-woman-holding-a-balance-1",
       "title": "Woman Holding a Balance",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/FK3sgM_5U48WgyZw8_z-5A/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/FK3sgM_5U48WgyZw8_z-5A/medium.jpg",
       "artist": {
         "name": "Johannes Vermeer",
         "hometown": "Delft, Netherlands",
@@ -361,8 +343,7 @@
       },
       "slug": "johannes-vermeer-a-lady-writing-1",
       "title": "A Lady Writing",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/kkQXTVbKBImWLnGWoLT6Qw/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/kkQXTVbKBImWLnGWoLT6Qw/medium.jpg",
       "artist": {
         "name": "Johannes Vermeer",
         "hometown": "Delft, Netherlands",
@@ -384,8 +365,7 @@
       },
       "slug": "anthony-van-dyck-head-of-a-young-man",
       "title": "Head of a Young Man",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/bMtCaSDAZYyPA1ZMpstDvA/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/bMtCaSDAZYyPA1ZMpstDvA/medium.jpg",
       "artist": {
         "name": "Anthony van Dyck",
         "hometown": "Antwerp, Belgium",
@@ -405,11 +385,9 @@
         "depth": null,
         "diameter": null
       },
-      "slug":
-        "abraham-bloemaert-saint-bernard-of-clairvaux-with-the-instruments-of-the-passion",
+      "slug": "abraham-bloemaert-saint-bernard-of-clairvaux-with-the-instruments-of-the-passion",
       "title": "Saint Bernard of Clairvaux with the Instruments of the Passion",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/FD_KWqRKt-cz40mtCXqzww/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/FD_KWqRKt-cz40mtCXqzww/medium.jpg",
       "artist": {
         "name": "Abraham Bloemaert",
         "hometown": "Gorinchem, Netherlands",
@@ -431,8 +409,7 @@
       },
       "slug": "abraham-bloemaert-head-of-an-old-man",
       "title": "Head of an Old Man",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/qE7QmlkE7IXhBtufr8tN0g/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/qE7QmlkE7IXhBtufr8tN0g/medium.jpg",
       "artist": {
         "name": "Abraham Bloemaert",
         "hometown": "Gorinchem, Netherlands",
@@ -452,11 +429,9 @@
         "depth": null,
         "diameter": null
       },
-      "slug":
-        "jacob-cornelisz-van-oostsanen-deploration-and-entombment-of-christ",
+      "slug": "jacob-cornelisz-van-oostsanen-deploration-and-entombment-of-christ",
       "title": "Deploration and Entombment of Christ",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/RTp2AupQ8BLekR-w1fddYg/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/RTp2AupQ8BLekR-w1fddYg/medium.jpg",
       "artist": {
         "name": "Jacob Cornelisz van Oostsanen",
         "hometown": "Oostzaan, Netherlands",
@@ -478,8 +453,7 @@
       },
       "slug": "abraham-bloemaert-acis-and-galatea",
       "title": "Acis and Galatea",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/ya9yrmLWPjiata-ZP2M7Iw/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/ya9yrmLWPjiata-ZP2M7Iw/medium.jpg",
       "artist": {
         "name": "Abraham Bloemaert",
         "hometown": "Gorinchem, Netherlands",
@@ -501,8 +475,7 @@
       },
       "slug": "jacob-cornelisz-van-oostsanen-the-kiss-of-judas",
       "title": "The Kiss of Judas",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/DmnWKvGL-hAAa4POwcuh0A/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/DmnWKvGL-hAAa4POwcuh0A/medium.jpg",
       "artist": {
         "name": "Jacob Cornelisz van Oostsanen",
         "hometown": "Oostzaan, Netherlands",
@@ -524,8 +497,7 @@
       },
       "slug": "allart-van-everdingen-chapel-1",
       "title": "Chapel",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/9BzcyAdJffZh3KRfprM0Vg/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/9BzcyAdJffZh3KRfprM0Vg/medium.jpg",
       "artist": {
         "name": "Allart van Everdingen",
         "hometown": "",
@@ -547,8 +519,7 @@
       },
       "slug": "jacob-van-ruisdael-country-house-in-a-park",
       "title": "Country House in a Park",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/ShYeG4kLAjFRGqEZX76QZw/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/ShYeG4kLAjFRGqEZX76QZw/medium.jpg",
       "artist": {
         "name": "Jacob van Ruisdael",
         "hometown": "Haarlem, Netherlands",
@@ -570,8 +541,7 @@
       },
       "slug": "rembrandt-van-rijn-peasant-with-his-hands-behind-his-back",
       "title": "Peasant with His Hands behind His Back",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/9A6ASt9ai247GdInHP60Cw/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/9A6ASt9ai247GdInHP60Cw/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -593,8 +563,7 @@
       },
       "slug": "allart-van-everdingen-mill-below-a-waterfall",
       "title": "Mill below a Waterfall",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/i6xlgxNrpD3wER1hH-uR0Q/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/i6xlgxNrpD3wER1hH-uR0Q/medium.jpg",
       "artist": {
         "name": "Allart van Everdingen",
         "hometown": "",
@@ -616,8 +585,7 @@
       },
       "slug": "joris-hoefnagel-animalia-rationalia-et-insecta-ignis-plate-liv",
       "title": "Animalia Rationalia et Insecta (Ignis):  Plate LIV",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/WSWPH-CephU0JhFR3fc3bQ/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/WSWPH-CephU0JhFR3fc3bQ/medium.jpg",
       "artist": {
         "name": "Joris Hoefnagel",
         "hometown": "",
@@ -639,8 +607,7 @@
       },
       "slug": "rembrandt-van-rijn-beggar-with-his-left-hand-extended",
       "title": "Beggar with His Left Hand Extended",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/vmoC87evRUdLEt4_wb5wDQ/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/vmoC87evRUdLEt4_wb5wDQ/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -660,11 +627,9 @@
         "depth": null,
         "diameter": null
       },
-      "slug":
-        "rembrandt-van-rijn-self-portrait-with-plumed-cap-and-lowered-sabre",
+      "slug": "rembrandt-van-rijn-self-portrait-with-plumed-cap-and-lowered-sabre",
       "title": "Self-Portrait (?) with Plumed Cap and Lowered Sabre",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/1FD6rcKKGm6EYAhWHqn5iw/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/1FD6rcKKGm6EYAhWHqn5iw/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -686,8 +651,7 @@
       },
       "slug": "rembrandt-van-rijn-the-golf-player",
       "title": "The Golf Player",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/eB0c2HP2BUMuTGk5qlDDaQ/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/eB0c2HP2BUMuTGk5qlDDaQ/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -709,8 +673,7 @@
       },
       "slug": "rembrandt-van-rijn-beggar-seated-on-a-bank-1",
       "title": "Beggar Seated on a Bank",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/e-hO74arhffp2GMpGOLJQQ/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/e-hO74arhffp2GMpGOLJQQ/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -732,8 +695,7 @@
       },
       "slug": "rembrandt-van-rijn-bust-of-an-elderly-man-in-a-flat-cap",
       "title": "Bust of an Elderly Man in a Flat Cap",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/Em13ph7YE3ujfS_bWm4zyA/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/Em13ph7YE3ujfS_bWm4zyA/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -753,11 +715,9 @@
         "depth": null,
         "diameter": null
       },
-      "slug":
-        "rembrandt-van-rijn-christ-and-the-woman-of-samaria-among-ruins-1",
+      "slug": "rembrandt-van-rijn-christ-and-the-woman-of-samaria-among-ruins-1",
       "title": "Christ and the Woman of Samaria Among Ruins",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/pXHJ-d7yPr31aPI99KWRrw/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/pXHJ-d7yPr31aPI99KWRrw/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -779,8 +739,7 @@
       },
       "slug": "abraham-bloemaert-seated-bishop",
       "title": "Seated Bishop",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/mIkFGj269ihh6BYCOgBbRQ/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/mIkFGj269ihh6BYCOgBbRQ/medium.jpg",
       "artist": {
         "name": "Abraham Bloemaert",
         "hometown": "Gorinchem, Netherlands",
@@ -802,8 +761,7 @@
       },
       "slug": "abraham-bloemaert-ritual-washing-of-the-israelites",
       "title": "Ritual Washing of the Israelites",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/dhVysmSAzvLUfoeWHuCEJA/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/dhVysmSAzvLUfoeWHuCEJA/medium.jpg",
       "artist": {
         "name": "Abraham Bloemaert",
         "hometown": "Gorinchem, Netherlands",
@@ -825,8 +783,7 @@
       },
       "slug": "jacob-cornelisz-van-oostsanen-christ-crowned-with-thorns",
       "title": "Christ Crowned with Thorns",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/JLcysLFzR_KLcTCzR9-vcw/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/JLcysLFzR_KLcTCzR9-vcw/medium.jpg",
       "artist": {
         "name": "Jacob Cornelisz van Oostsanen",
         "hometown": "Oostzaan, Netherlands",
@@ -848,8 +805,7 @@
       },
       "slug": "jacob-cornelisz-van-oostsanen-the-flagellation",
       "title": "The Flagellation",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/d_pgfcMuwRc9gcGCvBMg1g/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/d_pgfcMuwRc9gcGCvBMg1g/medium.jpg",
       "artist": {
         "name": "Jacob Cornelisz van Oostsanen",
         "hometown": "Oostzaan, Netherlands",
@@ -869,11 +825,9 @@
         "depth": null,
         "diameter": null
       },
-      "slug":
-        "joris-hoefnagel-animalia-qvadrvpedia-et-reptilia-terra-plate-liii",
+      "slug": "joris-hoefnagel-animalia-qvadrvpedia-et-reptilia-terra-plate-liii",
       "title": "Animalia Qvadrvpedia et Reptilia (Terra): Plate LIII",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/lsaverlvHf8HzHtf7pWhjg/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/lsaverlvHf8HzHtf7pWhjg/medium.jpg",
       "artist": {
         "name": "Joris Hoefnagel",
         "hometown": "",
@@ -895,8 +849,7 @@
       },
       "slug": "jacob-cornelisz-van-oostsanen-ecce-homo",
       "title": "Ecce Homo",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/e4CYs1zI-31nndivXzIDOQ/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/e4CYs1zI-31nndivXzIDOQ/medium.jpg",
       "artist": {
         "name": "Jacob Cornelisz van Oostsanen",
         "hometown": "Oostzaan, Netherlands",
@@ -918,8 +871,7 @@
       },
       "slug": "joris-hoefnagel-animalia-volatilia-et-amphibia-aier-plate-lv",
       "title": "Animalia Volatilia et Amphibia (Aier): Plate LV",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/ZhV_DQkmhGSX5g7bstp6_g/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/ZhV_DQkmhGSX5g7bstp6_g/medium.jpg",
       "artist": {
         "name": "Joris Hoefnagel",
         "hometown": "",
@@ -941,8 +893,7 @@
       },
       "slug": "jacob-cornelisz-van-oostsanen-christ-on-the-mount-of-olives",
       "title": "Christ on the Mount of Olives",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/huyRZHzmRcxtUsV5HxTfmA/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/huyRZHzmRcxtUsV5HxTfmA/medium.jpg",
       "artist": {
         "name": "Jacob Cornelisz van Oostsanen",
         "hometown": "Oostzaan, Netherlands",
@@ -964,8 +915,7 @@
       },
       "slug": "jacob-van-ruisdael-the-three-oaks",
       "title": "The Three Oaks",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/FLtJhzoX5CG9iY3j20s4sA/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/FLtJhzoX5CG9iY3j20s4sA/medium.jpg",
       "artist": {
         "name": "Jacob van Ruisdael",
         "hometown": "Haarlem, Netherlands",
@@ -987,8 +937,7 @@
       },
       "slug": "rembrandt-van-rijn-the-anatomy-lesson-of-dr-nicolaes-tulp",
       "title": "The Anatomy Lesson of Dr. Nicolaes Tulp",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/kvFioLTBXu0SWZ52sge1FQ/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/kvFioLTBXu0SWZ52sge1FQ/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -1010,8 +959,7 @@
       },
       "slug": "hans-bollongier-floral-still-life",
       "title": "Floral Still Life",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/REwHPiJkJLncb5KA2BLFEw/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/REwHPiJkJLncb5KA2BLFEw/medium.jpg",
       "artist": {
         "name": "Hans Bollongier",
         "hometown": "Haarlem, Netherlands",
@@ -1033,8 +981,7 @@
       },
       "slug": "dirck-hals-the-fete-champetre",
       "title": "The Fete Champetre",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/Maeo4w-0diOd6V1xNszqKQ/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/Maeo4w-0diOd6V1xNszqKQ/medium.jpg",
       "artist": {
         "name": "Dirck Hals",
         "hometown": "Haarlem, Netherlands",
@@ -1056,8 +1003,7 @@
       },
       "slug": "gerrit-van-honthorst-the-merry-fiddler",
       "title": "The Merry Fiddler",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/54vcVIEGBQn8BNlUIEW6AQ/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/54vcVIEGBQn8BNlUIEW6AQ/medium.jpg",
       "artist": {
         "name": "Gerrit van Honthorst",
         "hometown": "",
@@ -1079,8 +1025,7 @@
       },
       "slug": "adam-van-vianen-lidded-ewer",
       "title": "Lidded Ewer",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/TfDUkNz8Z93l1ZlHACM0og/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/TfDUkNz8Z93l1ZlHACM0og/medium.jpg",
       "artist": {
         "name": "Adam van Vianen",
         "hometown": "Utrecht, Netherlands",
@@ -1102,8 +1047,7 @@
       },
       "slug": "adriaen-thomasz-key-william-i-prince-of-orange",
       "title": "William I, Prince of Orange",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/-MicyRb2np-0fdsVXcmiEQ/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/-MicyRb2np-0fdsVXcmiEQ/medium.jpg",
       "artist": {
         "name": "Adriaen Thomasz Key",
         "hometown": "Antwerp, Belgium",
@@ -1123,11 +1067,9 @@
         "depth": null,
         "diameter": null
       },
-      "slug":
-        "workshop-of-jacob-cornelisz-van-oostsanen-portrait-of-jacob-cornelisz-van-oostsanen",
+      "slug": "workshop-of-jacob-cornelisz-van-oostsanen-portrait-of-jacob-cornelisz-van-oostsanen",
       "title": "Portrait of Jacob Cornelisz van Oostsanen",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/dFTRSccFAIaCZ0i1ENcNEw/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/dFTRSccFAIaCZ0i1ENcNEw/medium.jpg",
       "artist": {
         "name": "Workshop of Jacob Cornelisz. van Oostsanen",
         "hometown": "Oostzaan, Netherlands",
@@ -1149,8 +1091,7 @@
       },
       "slug": "hendrick-ter-brugghen-bagpipe-player",
       "title": "Bagpipe Player",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/59F_Q7v4buAQ5jFrNBaeGg/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/59F_Q7v4buAQ5jFrNBaeGg/medium.jpg",
       "artist": {
         "name": "Hendrick ter Brugghen",
         "hometown": "The Hague, Netherlands",
@@ -1172,8 +1113,7 @@
       },
       "slug": "johannes-vermeer-girl-with-a-flute",
       "title": "Girl with a Flute",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/D-w-ZaTt7SwHtkZjihABsg/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/D-w-ZaTt7SwHtkZjihABsg/medium.jpg",
       "artist": {
         "name": "Johannes Vermeer",
         "hometown": "Delft, Netherlands",
@@ -1195,8 +1135,7 @@
       },
       "slug": "johannes-vermeer-a-lady-writing",
       "title": "A Lady Writing",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/I7cw8pjYxisoQz4SzKx51w/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/I7cw8pjYxisoQz4SzKx51w/medium.jpg",
       "artist": {
         "name": "Johannes Vermeer",
         "hometown": "Delft, Netherlands",
@@ -1218,8 +1157,7 @@
       },
       "slug": "rembrandt-van-rijn-self-portrait-1659",
       "title": "Self Portrait, 1659",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/gwa65j8uA3P58LxldJYJAg/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/gwa65j8uA3P58LxldJYJAg/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -1241,8 +1179,7 @@
       },
       "slug": "rembrandt-van-rijn-the-mill",
       "title": "The Mill",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/1Nv6CZWY4leMHzI3qu0cog/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/1Nv6CZWY4leMHzI3qu0cog/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -1264,8 +1201,7 @@
       },
       "slug": "rembrandt-van-rijn-self-portrait-1660",
       "title": "Self-portrait",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/zg-r2cfXcA7HaZ4djUQbQw/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/zg-r2cfXcA7HaZ4djUQbQw/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -1287,8 +1223,7 @@
       },
       "slug": "lucas-van-leyden-worship-of-the-golden-calf",
       "title": "Worship of the Golden Calf",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/v7ty0jdlZwhIO7Sfxzphpw/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/v7ty0jdlZwhIO7Sfxzphpw/medium.jpg",
       "artist": {
         "name": "Lucas van Leyden",
         "hometown": "Leiden, Netherlands",
@@ -1310,8 +1245,7 @@
       },
       "slug": "joachim-beuckelaer-the-well-stocked-kitchen",
       "title": "The Well-stocked Kitchen",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/WepFm_C5TSQw6QjZHlX99w/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/WepFm_C5TSQw6QjZHlX99w/medium.jpg",
       "artist": {
         "name": "Joachim Beuckelaer",
         "hometown": "",
@@ -1333,8 +1267,7 @@
       },
       "slug": "cornelis-cornelisz-van-haarlem-the-massacre-of-the-innocents",
       "title": "The Massacre of the Innocents",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/wZadDelncXjxQX1Ivzlmkw/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/wZadDelncXjxQX1Ivzlmkw/medium.jpg",
       "artist": {
         "name": "Cornelis Cornelisz van Haarlem",
         "hometown": "",
@@ -1356,8 +1289,7 @@
       },
       "slug": "hendrick-avercamp-winter-landscape-with-ice-skaters",
       "title": "Winter Landscape with Ice Skaters",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/ob7WAxFn3Y1SajkfOrIOrQ/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/ob7WAxFn3Y1SajkfOrIOrQ/medium.jpg",
       "artist": {
         "name": "Hendrick Avercamp",
         "hometown": "Amsterdam, Netherlands",
@@ -1377,11 +1309,9 @@
         "depth": null,
         "diameter": null
       },
-      "slug":
-        "pieter-jansz-saenredam-interior-of-the-sint-odulphuskerk-in-assendelft",
+      "slug": "pieter-jansz-saenredam-interior-of-the-sint-odulphuskerk-in-assendelft",
       "title": "Interior of the Sint-Odulphuskerk in Assendelft",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/qmZisDk22InXtHkqDUkapg/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/qmZisDk22InXtHkqDUkapg/medium.jpg",
       "artist": {
         "name": "Pieter Jansz. Saenredam",
         "hometown": "Assendelft, Netherlands",
@@ -1403,8 +1333,7 @@
       },
       "slug": "jan-both-italian-landscape-with-a-draughtsman",
       "title": "Italian Landscape with a Draughtsman",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/3PEnf7HkIgFFAfrmpm6qfw/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/3PEnf7HkIgFFAfrmpm6qfw/medium.jpg",
       "artist": {
         "name": "Jan Both",
         "hometown": "",
@@ -1426,8 +1355,7 @@
       },
       "slug": "aelbert-cuyp-river-landscape-with-riders",
       "title": "River Landscape with Riders",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/Z1b4KZ5F3bsX9YVpE1vaag/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/Z1b4KZ5F3bsX9YVpE1vaag/medium.jpg",
       "artist": {
         "name": "Aelbert Cuyp",
         "hometown": "Dordrecht, Netherlands",
@@ -1447,12 +1375,9 @@
         "depth": null,
         "diameter": null
       },
-      "slug":
-        "rembrandt-van-rijn-the-wardens-of-the-amsterdam-drapers-guild-known-as-the-syndics",
-      "title":
-        "The Wardens of the Amsterdam Drapers Guild, Known as 'The Syndics'",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/kZMo5_gjk1TbWVgZQuwyLQ/medium.jpg",
+      "slug": "rembrandt-van-rijn-the-wardens-of-the-amsterdam-drapers-guild-known-as-the-syndics",
+      "title": "The Wardens of the Amsterdam Drapers Guild, Known as 'The Syndics'",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/kZMo5_gjk1TbWVgZQuwyLQ/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -1474,8 +1399,7 @@
       },
       "slug": "rembrandt-van-rijn-portrait-of-a-woman-possibly-maria-trip",
       "title": "Portrait of a Woman, Possibly Maria Trip",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/UJxHMaBgBKabD2g2sNtOpA/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/UJxHMaBgBKabD2g2sNtOpA/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -1497,8 +1421,7 @@
       },
       "slug": "rembrandt-van-rijn-isaac-and-rebecca-known-as-the-jewish-bride",
       "title": "Isaac and Rebecca, Known as 'The Jewish Bride'",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/T8zyOM1P2ZbMiiw4Fjv_Ag/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/T8zyOM1P2ZbMiiw4Fjv_Ag/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -1520,8 +1443,7 @@
       },
       "slug": "willem-van-de-velde-the-elder-the-battle-of-terheide",
       "title": "The Battle of Terheide",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/fOlaqjoaHuNXWumgC3CTbA/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/fOlaqjoaHuNXWumgC3CTbA/medium.jpg",
       "artist": {
         "name": "Willem van de Velde the Elder",
         "hometown": "",
@@ -1541,11 +1463,9 @@
         "depth": null,
         "diameter": null
       },
-      "slug":
-        "johannes-vermeer-view-of-houses-in-delft-known-as-the-little-street",
+      "slug": "johannes-vermeer-view-of-houses-in-delft-known-as-the-little-street",
       "title": "View of Houses in Delft, Known as 'The Little Street'",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/6sSY1BE4CGCm9-pQnfZe0A/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/6sSY1BE4CGCm9-pQnfZe0A/medium.jpg",
       "artist": {
         "name": "Johannes Vermeer",
         "hometown": "Delft, Netherlands",
@@ -1567,8 +1487,7 @@
       },
       "slug": "rembrandt-van-rijn-self-portrait",
       "title": "Self-portrait",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/88gjaABNaDJiH4eqCB-DKg/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/88gjaABNaDJiH4eqCB-DKg/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -1590,8 +1509,7 @@
       },
       "slug": "rachel-ruysch-flower-still-life",
       "title": "Flower Still Life",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/6jmZ3p669qCVrFat-pwiPg/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/6jmZ3p669qCVrFat-pwiPg/medium.jpg",
       "artist": {
         "name": "Rachel Ruysch",
         "hometown": "The Hague, Netherlands",
@@ -1613,8 +1531,7 @@
       },
       "slug": "rembrandt-van-rijn-three-crosses-first-state",
       "title": "Three Crosses (First State)",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/yeDP7Jxgb5hYEDqlBkiBNg/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/yeDP7Jxgb5hYEDqlBkiBNg/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -1634,11 +1551,9 @@
         "depth": null,
         "diameter": null
       },
-      "slug":
-        "clara-peeters-still-life-with-flowers-goblet-dried-fruit-and-pretzels",
+      "slug": "clara-peeters-still-life-with-flowers-goblet-dried-fruit-and-pretzels",
       "title": "Still Life with Flowers, Goblet, Dried Fruit, and Pretzels",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/GK7XtLLzOhpAmluB-kMvFQ/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/GK7XtLLzOhpAmluB-kMvFQ/medium.jpg",
       "artist": {
         "name": "Clara Peeters",
         "hometown": "Antwerp, Belgium",
@@ -1660,8 +1575,7 @@
       },
       "slug": "peter-paul-rubens-garden-of-love",
       "title": "Garden of Love",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/_vtbvAiC89L2ekpDsaJL9Q/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/_vtbvAiC89L2ekpDsaJL9Q/medium.jpg",
       "artist": {
         "name": "Peter Paul Rubens",
         "hometown": "Siegen, Westphalia",
@@ -1683,8 +1597,7 @@
       },
       "slug": "anthony-van-dyck-charles-i-at-the-hunt",
       "title": "Charles I at the Hunt",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/anudTzpA5RT6b_h2WBk17Q/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/anudTzpA5RT6b_h2WBk17Q/medium.jpg",
       "artist": {
         "name": "Anthony van Dyck",
         "hometown": "Antwerp, Belgium",
@@ -1706,8 +1619,7 @@
       },
       "slug": "hieronymus-bosch-the-garden-of-earthly-delights-2",
       "title": "The Garden of Earthly Delights",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/89kKFK7u7DpNHoyTv-NfyQ/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/89kKFK7u7DpNHoyTv-NfyQ/medium.jpg",
       "artist": {
         "name": "Hieronymus Bosch",
         "hometown": null,
@@ -1727,12 +1639,9 @@
         "depth": null,
         "diameter": null
       },
-      "slug":
-        "rembrandt-van-rijn-the-company-of-frans-banning-cocq-and-willem-van-ruytenburch-the-night-watch",
-      "title":
-        "The Company of Frans Banning Cocq and Willem van Ruytenburch (The Night Watch)",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/IG8ZLvVmZgQiTn2zK0Bp8w/medium.jpg",
+      "slug": "rembrandt-van-rijn-the-company-of-frans-banning-cocq-and-willem-van-ruytenburch-the-night-watch",
+      "title": "The Company of Frans Banning Cocq and Willem van Ruytenburch (The Night Watch)",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/IG8ZLvVmZgQiTn2zK0Bp8w/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -1754,8 +1663,7 @@
       },
       "slug": "petrus-christus-a-goldsmith-saint-eligius-in-his-shop",
       "title": "A Goldsmith (Saint Eligius?) in His Shop",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/mcZZCCV0yOIldUXClykCdA/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/mcZZCCV0yOIldUXClykCdA/medium.jpg",
       "artist": {
         "name": "Petrus Christus",
         "hometown": "Baarle-Hertog, Belgium",
@@ -1777,8 +1685,7 @@
       },
       "slug": "hugo-van-der-goes-portinari-altarpiece-open",
       "title": "Portinari Altarpiece (open)",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/aRhzOtAl8_YLLbvsMY7tAQ/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/aRhzOtAl8_YLLbvsMY7tAQ/medium.jpg",
       "artist": {
         "name": "Hugo van der Goes",
         "hometown": "Ghent, Belgium",
@@ -1800,8 +1707,7 @@
       },
       "slug": "anthony-van-dyck-marchesa-elena-grimaldi-cattaneo",
       "title": "Marchesa Elena Grimaldi Cattaneo",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/u890ZmZML_Xwo-afANDGlw/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/u890ZmZML_Xwo-afANDGlw/medium.jpg",
       "artist": {
         "name": "Anthony van Dyck",
         "hometown": "Antwerp, Belgium",
@@ -1823,8 +1729,7 @@
       },
       "slug": "jacob-van-ruisdael-landscape",
       "title": "Landscape",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/Gp0qiTfaKBu0wfo6Xs2XBg/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/Gp0qiTfaKBu0wfo6Xs2XBg/medium.jpg",
       "artist": {
         "name": "Jacob van Ruisdael",
         "hometown": "Haarlem, Netherlands",
@@ -1844,11 +1749,9 @@
         "depth": null,
         "diameter": null
       },
-      "slug":
-        "rembrandt-van-rijn-figures-on-the-anthoniesdijk-entering-houtewael-verso",
+      "slug": "rembrandt-van-rijn-figures-on-the-anthoniesdijk-entering-houtewael-verso",
       "title": "Figures on the Anthoniesdijk Entering Houtewael [verso]",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/sv-0bD1S6ysk4jqA73SXQQ/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/sv-0bD1S6ysk4jqA73SXQQ/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -1870,8 +1773,7 @@
       },
       "slug": "rembrandt-van-rijn-the-windmill-1",
       "title": "The Windmill",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/_qUmHuSSXLA3f5ZPCSi2BQ/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/_qUmHuSSXLA3f5ZPCSi2BQ/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -1893,8 +1795,7 @@
       },
       "slug": "jacob-cornelisz-van-oostsanen-christ-taken-captive",
       "title": "Christ Taken Captive",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/WGs0PPBdBtaKvec3czQOJQ/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/WGs0PPBdBtaKvec3czQOJQ/medium.jpg",
       "artist": {
         "name": "Jacob Cornelisz van Oostsanen",
         "hometown": "Oostzaan, Netherlands",
@@ -1916,8 +1817,7 @@
       },
       "slug": "rembrandt-van-rijn-the-omval-1",
       "title": "The Omval",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/-ukWiJ0Zngwnrl-Ln1oPgA/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/-ukWiJ0Zngwnrl-Ln1oPgA/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -1939,8 +1839,7 @@
       },
       "slug": "rembrandt-van-rijn-the-stoning-of-saint-stephen",
       "title": "The Stoning of Saint Stephen",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/d787f0DtrFCyQWuwLB5Fow/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/d787f0DtrFCyQWuwLB5Fow/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -1962,8 +1861,7 @@
       },
       "slug": "frans-hals-portrait-of-a-man",
       "title": "Portrait of a Man",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/6lJ0F8v0ZYFmXsCbkHC3DA/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/6lJ0F8v0ZYFmXsCbkHC3DA/medium.jpg",
       "artist": {
         "name": "Frans Hals",
         "hometown": "Antwerp, Belgium",
@@ -1985,8 +1883,7 @@
       },
       "slug": "jacob-van-ruisdael-cottage-on-a-hill",
       "title": "Cottage on a Hill",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/9Y3hjKIAEQxq69XH0Q30QQ/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/9Y3hjKIAEQxq69XH0Q30QQ/medium.jpg",
       "artist": {
         "name": "Jacob van Ruisdael",
         "hometown": "Haarlem, Netherlands",
@@ -2008,8 +1905,7 @@
       },
       "slug": "rembrandt-van-rijn-view-of-diemen",
       "title": "View of Diemen",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/sp2AUg6vhgeaXUNYo31USw/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/sp2AUg6vhgeaXUNYo31USw/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -2031,8 +1927,7 @@
       },
       "slug": "rembrandt-van-rijn-man-at-a-desk-wearing-a-cross-and-chain-1",
       "title": "Man at a Desk Wearing a Cross and Chain",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/935KbHteC_eALATEIXhmtQ/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/935KbHteC_eALATEIXhmtQ/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -2052,11 +1947,9 @@
         "depth": null,
         "diameter": null
       },
-      "slug":
-        "rembrandt-van-rijn-christ-crucified-between-the-two-thieves-an-oval-plate",
+      "slug": "rembrandt-van-rijn-christ-crucified-between-the-two-thieves-an-oval-plate",
       "title": "Christ Crucified between the Two Thieves: an Oval Plate",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/IHfCL27tGaDJrc4NZsqnTw/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/IHfCL27tGaDJrc4NZsqnTw/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -2078,8 +1971,7 @@
       },
       "slug": "rembrandt-van-rijn-woman-sitting-half-dressed-beside-a-stove-1",
       "title": "Woman Sitting Half Dressed beside a Stove",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/eUcFAI8j2g6mJKLL4dCgEA/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/eUcFAI8j2g6mJKLL4dCgEA/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -2099,11 +1991,9 @@
         "depth": null,
         "diameter": null
       },
-      "slug":
-        "rembrandt-van-rijn-self-portrait-in-a-flat-cap-and-embroidered-dress-1",
+      "slug": "rembrandt-van-rijn-self-portrait-in-a-flat-cap-and-embroidered-dress-1",
       "title": "Self-Portrait in a Flat Cap and Embroidered Dress",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/dFtDDR3r6IWyVkUqfx9a_Q/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/dFtDDR3r6IWyVkUqfx9a_Q/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -2125,8 +2015,7 @@
       },
       "slug": "anthony-van-dyck-susanna-fourment-and-her-daughter",
       "title": "Susanna Fourment and Her Daughter",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/3ALtVIH8YzIqCvhzqCTCAA/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/3ALtVIH8YzIqCvhzqCTCAA/medium.jpg",
       "artist": {
         "name": "Anthony van Dyck",
         "hometown": "Antwerp, Belgium",
@@ -2148,8 +2037,7 @@
       },
       "slug": "rembrandt-van-rijn-jews-in-the-synagogue",
       "title": "Jews in the Synagogue",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/9YhQ3LtTA1jeyFuAIZihJQ/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/9YhQ3LtTA1jeyFuAIZihJQ/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -2171,8 +2059,7 @@
       },
       "slug": "rembrandt-van-rijn-jan-cornelisz-sylvius-the-preacher",
       "title": "Jan Cornelisz Sylvius, the Preacher",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/KbT2B_vxIDqgPDLl3acidg/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/KbT2B_vxIDqgPDLl3acidg/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -2194,8 +2081,7 @@
       },
       "slug": "allart-van-everdingen-three-goats-at-the-river",
       "title": "Three Goats at the River",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/IIu3tkV8xrFAgnHJOI9chw/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/IIu3tkV8xrFAgnHJOI9chw/medium.jpg",
       "artist": {
         "name": "Allart van Everdingen",
         "hometown": "",
@@ -2217,8 +2103,7 @@
       },
       "slug": "rembrandt-van-rijn-the-baptism-of-the-eunuch-1",
       "title": "The Baptism of the Eunuch",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/RGcdklhuLlzfhleW24EOkw/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/RGcdklhuLlzfhleW24EOkw/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -2240,8 +2125,7 @@
       },
       "slug": "rembrandt-van-rijn-the-phoenix-or-the-statue-overthrown",
       "title": "The Phoenix or the Statue Overthrown",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/4Gu26DwR0xOQOBb6NXqKPg/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/4Gu26DwR0xOQOBb6NXqKPg/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -2263,8 +2147,7 @@
       },
       "slug": "rembrandt-van-rijn-self-portrait-drawing-at-a-window-1",
       "title": "Self-Portrait Drawing at a Window",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/C4ZcucvKgSqw8pTeURF_Kg/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/C4ZcucvKgSqw8pTeURF_Kg/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
@@ -2286,8 +2169,7 @@
       },
       "slug": "peter-paul-rubens-the-meeting-of-abraham-and-melchizedek",
       "title": "The Meeting of Abraham and Melchizedek",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/wJwEzZf3FPlg65SVoYnvyQ/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/wJwEzZf3FPlg65SVoYnvyQ/medium.jpg",
       "artist": {
         "name": "Peter Paul Rubens",
         "hometown": "Siegen, Westphalia",
@@ -2309,8 +2191,7 @@
       },
       "slug": "rembrandt-van-rijn-christ-presented-to-the-people-oblong-plate",
       "title": "Christ Presented to the People: Oblong Plate",
-      "image":
-        "https://d32dm0rphc51dk.cloudfront.net/zycWkWw__u36V6VAWW_e7Q/medium.jpg",
+      "image": "https://d32dm0rphc51dk.cloudfront.net/zycWkWw__u36V6VAWW_e7Q/medium.jpg",
       "artist": {
         "name": "Rembrandt van Rijn",
         "hometown": "Leiden, Netherlands",
