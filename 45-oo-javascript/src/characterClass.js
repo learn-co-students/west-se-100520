@@ -22,7 +22,7 @@ class Character extends GameObject {
         this.assets = 'assets/character'
         this.element.src = `${this.assets}/static.gif`
        
-        document.body.appendChild(this.element)
+        document.body.querySelector('#main').appendChild(this.element)
         Character.allArray.push(this)
     }
 
@@ -31,7 +31,7 @@ class Character extends GameObject {
         this.stop()
         console.log("Outside interval", this)
         this.movement = setInterval(() => {
-            console.log("Inside interval", this)
+            // console.log("Inside interval", this)
           let currentPosition = parseInt(this.element.style.left)
           this.element.style.left = currentPosition + 1 + 'px'
         }, this.speed)

@@ -14,7 +14,7 @@ function createCharacter(speed) {
     character.element.style.left = '0px'
     character.element.style.top = '0px'
     character.element.style.width = '25px'
-    document.body.appendChild(character.element)
+    document.body.querySelector('#main').appendChild(character.element)
 
     // let movement
     // character.movement = null
