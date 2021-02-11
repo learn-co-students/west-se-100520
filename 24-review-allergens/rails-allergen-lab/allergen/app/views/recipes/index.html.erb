@@ -5,6 +5,14 @@
         <li><%= link_to r.name, r %></li>
     <% end %>
 </ol>
+
+
+<%= form_with url: "/recipes", method: :get do |form| %>
+  <%= form.label :query, "Search for:" %>
+  <%= form.text_field :query %>
+  <%= form.submit "Search" %>
+<% end %>
+
 <%= form_tag recipes_path, method: :get do %>
     <%= submit_tag "Sort by number of ingreds", name: :sort%>
 <% end %>

@@ -5,9 +5,18 @@ class RecipesController < ApplicationController
         # raise params.inspect
         if params[:sort]
             @recipes = Recipe.all.sort_by {|r| r.ingredients.count }.reverse
+        elsif params[:query]
+            @recipes = Recipe.where("name LIKE ?", "%#{params[:query]}%")
+            # @recipes = Recipe.find_by_name(params[:query])
+            byebug
         else
             @recipes = Recipe.all
         end
+    end
+    
+    def search
+        # byebug
+        render :index
     end
     
     def new

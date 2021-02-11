@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # get '/search', to: 'recipes#search'
   resources :allergies, only: [:new, :create, :destroy]
   resources :recipe_ingredients, only: [:new, :create]
   resources :ingredients, only: [:index, :show]
