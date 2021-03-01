@@ -66,6 +66,18 @@
       "id": 1,
       "quoteId": 1,
       "createdAt": 1558524356
+    },
+    {
+      "quoteId": 13,
+      "id": 2
+    },
+    {
+      "quoteId": 12,
+      "id": 3
+    },
+    {
+      "quoteId": 13,
+      "id": 4
     }
   ]
 }

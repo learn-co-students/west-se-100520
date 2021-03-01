@@ -36,7 +36,8 @@
             </blockquote>
             `
         quoteList.prepend(li)
-
+        const likeButton = li.querySelector('.btn-success')
+        likeButton.addEventListener('click', () => addLike(data.id))
         const deleteButton = li.querySelector('.btn-danger')
         deleteButton.addEventListener('click', () => deleteQuote(data.id))
     }
@@ -62,6 +63,22 @@
         })
             .then(res => res.json())
             .then(getQuotes)
+    }
+
+    function addLike(quoteId){
+        const id = parseInt(quoteId)
+        const body = {
+            quoteId: id
+        }
+        fetch("http://localhost:3000/likes", { 
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(body)
+        })
+        .then(getQuotes)
     }
 
     function deleteQuote(quoteId) {
