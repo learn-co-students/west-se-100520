@@ -38,7 +38,7 @@ export default class HogTile extends Component {
     }
 
     handleClick = () => {
-        this.props.selectHog(this.props.hog.name)
+        this.props.chooseHog(this.props.hog.name)
     }
     handleHide = () => {
         this.setState({show: false})
